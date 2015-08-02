@@ -3,9 +3,9 @@
 ###### Research & development with:
 1. React + Flux + all-SVGs-all-the-time style
 2. Concurrency with WebWorkers (want to build games that activates all your cores)
-3. Audio.  Because GUIs want to have acronymic mutation into GAUIs.
+3. Audio. Comprehensive UI development strategy indicates must implement interface on this cognitive channel ; _(when the hardware supports it I guess we'll be doing tactile and olfactory stuff too_) .
 
-###### why yet another GAUI workshop
+###### why yet another UI workshop
 
 I needed to refactor deeply the MineSweeper at [Vickers](https://github.com/Terebinth/Vickers), integrating a Flux architecture or something similar.
 
