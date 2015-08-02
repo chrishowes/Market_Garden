@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "flux": "latest",
+    "react-dom": "^0.14.0-beta1",
+    "react":"^0.14.0-beta1",
+    "bluebird": "latest",
+    "mathjs": "latest",
+    "worker-loader": "latest",
+    "redis": "latest",
+    "react-hot-loader": "latest",
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "shortid": "latest",
+    "source-map-loader": "latest",
+    "immutable":"latest",
+    "webpack-dev-middleware": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "style-loader": "latest",
+    "css-loader": "latest",
+    "stylus-loader": "latest",
+    "webpack-dev-server": "latest",
+    "coffee-loader": "latest",
+    "webpack": "latest",
+    "core-js": "latest",
+    "lodash": "latest"
+  }
+}
