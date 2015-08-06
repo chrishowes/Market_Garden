@@ -11,6 +11,10 @@ Bluebird = require('bluebird')
 math = require('./math.min.js')
 flux = require('flux')
 
+#require('./three.min.js')
+
+c "Three", THREE
+
 Dispatcher = flux.Dispatcher
 dispatcher = new Dispatcher()
 EventEmitter = require('events').EventEmitter

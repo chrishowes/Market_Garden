@@ -4,13 +4,25 @@
 {svg, circle, rect, line, input, defs, clipPath, linearGradient, stop, g, path, d, polygon, image, pattern, filter, feBlend, feOffset, polyline, feGaussianBlur, feMergeNode, feMerge, radialGradient, foreignObject, text, ellipse} = React.DOM
 
 dragoon_store = require('../stores/dragoon_store_000_.coffee')
+kestrel_store = require('../stores/kestrel_store_000_.coffee')
 
 glyph = rr
+
+    _on_change_000: ->
+        c 'market glyph listener got emmision from kestrel'
+        @setState
+            text: "pow wow"
+
+    componentDidMount: ->
+        kestrel_store.add_changeListener @_on_change_000
+
+    getInitialState: ->
+        text: "initial hello"
 
     shouldComponentUpdate: (nextProps, nextState) ->
         {imm_M} = @props
         next_imm_M = nextProps.imm_M
-        if (Imm.is(imm_M, next_imm_M))
+        if (Imm.is(imm_M, next_imm_M)) and (@state.text is nextState.text)
             return false
         else
             return true
@@ -43,8 +55,6 @@ glyph = rr
             origin : mm(M, [nc.cx, nc.cy, 1])
             radius: nc.r * M[0][0]
 
-
-
         # now we are at the actual render definition, actually defining rendered 
         # svg elements.
         svg svg_bp,
@@ -62,6 +72,13 @@ glyph = rr
                 fill: 'blue'
                 stroke: 'purple'
                 onClick: @handle_click_001
+            text
+                x: circ_002.origin[0]
+                y: circ_002.origin[1]
+                fill: 'white'
+                fontSize: 10 * M[0][0]
+                ,
+                @state.text
 
 
 

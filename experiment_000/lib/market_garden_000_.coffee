@@ -8,6 +8,10 @@ c 'React version', React.version
 c 'dispatcher', dispatcher
 
 glyph_000 = require('./components/market_glyph_000_.coffee')()
+board_000 = require('./components/board_000_.coffee')()
+
+dragoon_store = require('./stores/dragoon_store_000_.coffee')
+kestrel_store = require('./stores/kestrel_store_000_.coffee')
 
 market_garden = rr
 
@@ -39,14 +43,14 @@ market_garden = rr
         @set_boundingRect()
         window.onresize = @debounced_set_boundingRect # might perform the execution here instead of on the debounced_set_boundingRect definition, better style ?
 
-    from_root_payload_002: ->
-        smaller = if @state.view_width < @state.view_height then @state.view_width else @state.view_height
-        z = smaller / 200
-        M = [[z, 0, (@state.view_width / 2)],[0, -z, (@state.view_height / 2)],[0, 0, 1]] # homogeneous coordinates transform matrix
-        imm_M: Imm.fromJS M
-        from_root: on
-
     render: ->
+
+        from_root_payload_002 = =>
+            smaller = if @state.view_width < @state.view_height then @state.view_width else @state.view_height
+            z = smaller / 200
+            M = [[z, 0, (@state.view_width / 2)],[0, -z, (@state.view_height / 2)],[0, 0, 1]] # homogeneous coordinates transform matrix
+            imm_M: Imm.fromJS M
+            from_root: on
         main_div = ->
             style:
                 background: 'black'
@@ -62,7 +66,7 @@ market_garden = rr
             div main_div()
         else
             div main_div(),
-                glyph_000 @from_root_payload_002()
+                glyph_000 from_root_payload_002()
 
 React_DOM.render market_garden(), imp_root
 
