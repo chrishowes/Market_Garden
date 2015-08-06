@@ -1,13 +1,13 @@
 ## Market_Garden
 
-###### Research & development with:
-~~1. React + Flux + all-SVGs-all-the-time style~~
-0: Flux for domain-logic + React for Render. 
-1: Eschew HTML+CSS (except for proper hypertext doc applications) in favor of rendering everything with WebGL. (currently Three.js).
-1.5: Fallback to SVG-all-the-things.  We've had good results with this, only going to (1) because suspect could get even _better_ results with WebGL.
-1.8: SVG-all-the-things relies on good Immutable implementation and rendering stuff.  Eliminate uneccesary rendering.
-2. Concurrency with WebWorkers. Research how to factor out computationally intensive elements of program flow to workers.  WebGL will apparently help massively with this, in respect to the graphics rendering.  I think all that's left to optimise in this regard -- well that would depend on the game/app, any non-graphical logic.  I really have no idea how this will work out, just want to experiment and learn. Seeing that new Galaxies coming out of Samsung with 8 cores I'm thinking it would mean something substantial to have all of them spinning.  
-3. Audio. Comprehensive UI development strategy indicates must implement interface on this cognitive channel ; _(when the hardware supports it I guess we'll be doing tactile and olfactory stuff too_) .  For audio I want to do live simulation of music file channel mixed with microphone inpuut modulated by control interface .  So like when user plays game they can talk to other player over RTC but it's all distorted as function of game state, control input, etc.
+##### Research & development with:
+###### ~~1. React + Flux + all-SVGs-all-the-time style~~
+######0: Flux for domain-logic + React for Render.
+######1: Eschew HTML+CSS (except for proper hypertext doc applications) in favor of rendering everything with WebGL. (currently Three.js).
+######1.5: Fallback to SVG-all-the-things.  We've had good results with this, only going to (1) because suspect could get even _better_ results with WebGL.
+######1.8: SVG-all-the-things relies on good Immutable implementation and rendering stuff.  Eliminate uneccesary rendering.
+######2. Concurrency with WebWorkers. Research how to factor out computationally intensive elements of program flow to workers.  WebGL will apparently help massively with this, in respect to the graphics rendering.  I think all that's left to optimise in this regard -- well that would depend on the game/app, any non-graphical logic.  I really have no idea how this will work out, just want to experiment and learn. Seeing that new Galaxies coming out of Samsung with 8 cores I'm thinking it would mean something substantial to have all of them spinning.  
+######3. Audio. Comprehensive UI development strategy indicates must implement interface on this cognitive channel ; _(when the hardware supports it I guess we'll be doing tactile and olfactory stuff too_) .  For audio I want to do live simulation of music file channel mixed with microphone inpuut modulated by control interface .  So like when user plays game they can talk to other player over RTC but it's all distorted as function of game state, control input, etc.
 
 
 ###### News
