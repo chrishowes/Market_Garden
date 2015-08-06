@@ -12,12 +12,31 @@
 
 <h6>Research &amp; development with:</h6>
 
-<ol>
-<li>React + Flux + all-SVGs-all-the-time style</li>
-<li>Concurrency with WebWorkers (want to build games that activates all your cores)</li>
-<li>Audio. Comprehensive UI development strategy indicates must implement interface on this cognitive channel ; <em>(when the hardware supports it I guess we&rsquo;ll be doing tactile and olfactory stuff too</em>) .</li>
-</ol>
+<p><del>1. React + Flux + all-SVGs-all-the-time style</del>
+0: Flux for domain-logic + React for Render.
+1: Eschew HTML+CSS (except for proper hypertext doc applications) in favor of rendering everything with WebGL. (currently Three.js).
+1.5: Fallback to SVG-all-the-things.  We&rsquo;ve had good results with this, only going to (1) because suspect could get even <em>better</em> results with WebGL.
+1.8: SVG-all-the-things relies on good Immutable implementation and rendering stuff.  Eliminate uneccesary rendering.
+2. Concurrency with WebWorkers. Research how to factor out computationally intensive elements of program flow to workers.  WebGL will apparently help massively with this, in respect to the graphics rendering.  I think all that&rsquo;s left to optimise in this regard &ndash; well that would depend on the game/app, any non-graphical logic.  I really have no idea how this will work out, just want to experiment and learn. Seeing that new Galaxies coming out of Samsung with 8 cores I&rsquo;m thinking it would mean something substantial to have all of them spinning.<br/>
+3. Audio. Comprehensive UI development strategy indicates must implement interface on this cognitive channel ; <em>(when the hardware supports it I guess we&rsquo;ll be doing tactile and olfactory stuff too</em>) .  For audio I want to do live simulation of music file channel mixed with microphone inpuut modulated by control interface .  So like when user plays game they can talk to other player over RTC but it&rsquo;s all distorted as function of game state, control input, etc.</p>
 
+<h6>News</h6>
+
+<p>-aug6-  I had enlightenment newly, it seems</p>
+
+<p>(alpha) rendering might be best through THREE.js even for Two_Dimensional apps, given the way it goes to hardware.  And actually, will probably start slipping subtle 3D stuff in.</p>
+
+<p>(beta) I think the audio will need to be synthesised realtime, partly from channels associated with like user&rsquo;s microphone.  this means web-rtc.</p>
+
+<p>(gamma) The audio is first milestone with webrtc, second milestone would be getting p2p networked play happening</p>
+
+<p>(delta) Implementing best possible parallelism/concurrency strategy possible with WebWorkers remains research+develop priority.</p>
+
+<p>(epsilon) Want to put translucent video overlays (music video fragments) on the background of spacewar and some museum / maze / webapp constructions.  more webrtc maybe, especially if playback is morphed realtime as a parameter of user-input / control interface activity.</p>
+
+<p>(zeta) I&rsquo;m seeking grant/sponsorship funding for equipment purchase (above are hardware intensive tracks);
+<strong>Lenovo W-541 , 32GB RAM, NVIDIA K2100-2GBRAM ,[&hellip;] basically max everything until it&rsquo;s $5k+.Then eta and theta come to pass.</strong>
+<em>(Indy For hire: I can build you apps and systems.)</em></p>
 
 <h6>why yet another UI workshop</h6>
 
