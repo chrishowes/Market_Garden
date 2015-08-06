@@ -5,6 +5,29 @@
 2. Concurrency with WebWorkers (want to build games that activates all your cores)
 3. Audio. Comprehensive UI development strategy indicates must implement interface on this cognitive channel ; _(when the hardware supports it I guess we'll be doing tactile and olfactory stuff too_) .
 
+
+
+
+
+###### News
+
+-aug6-  I had enlightenment newly, it seems 
+
+(alpha) rendering might be best through THREE.js even for Two_Dimensional apps, given the way it goes to hardware.  And actually, will probably start slipping subtle 3D stuff in.
+
+(beta) I think the audio will need to be synthesised realtime, partly from channels associated with like user's microphone.  this means web-rtc.
+
+(gamma) The audio is first milestone with webrtc, second milestone would be getting p2p networked play happening
+
+(delta) Implementing best possible parallelism/concurrency strategy possible with WebWorkers remains research+develop priority.
+
+(epsilon) Want to put translucent video overlays (music video fragments) on the background of spacewar and some museum / maze / webapp constructions.  more webrtc maybe, especially if playback is morphed realtime as a parameter of user-input / control interface activity. 
+
+(zeta) I'm seeking grant/sponsorship funding for equipment purchase (above are hardware intensive tracks); 
+**Lenovo W-541 , 32GB RAM, NVIDIA K2100-2GBRAM ,[...] basically max everything until it's $5k+.Then eta and theta come to pass.**
+_(Indy For hire: I can build you apps and systems.)_
+
+
 ###### why yet another UI workshop
 
 I needed to refactor deeply the MineSweeper at [Vickers](https://github.com/Terebinth/Vickers), integrating a Flux architecture or something similar.
