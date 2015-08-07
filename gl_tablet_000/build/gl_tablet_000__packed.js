@@ -51,7 +51,7 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Bluebird, Imm, React, React_DOM, _, assign, board_000, c, dispatcher, div, dragoon_store, flux, glyph_000, glyph_001, imp_root, kestrel_store, keys, market_garden, math, mm, ref, rr, shortid, svg_bp;
+	var Bluebird, Gladder, Imm, React, React_DOM, _, assign, c, canvas, dispatcher, div, flux, gl_tablet, imp_root, keys, math, mm, ref, ref1, rr, shortid, svg_bp;
 
 	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 
@@ -59,79 +59,55 @@
 
 	__webpack_require__(2);
 
-	ref = __webpack_require__(20)(), dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
+	ref = __webpack_require__(20)(), Gladder = ref.Gladder, dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
 
-	div = React.DOM.div;
+	ref1 = React.DOM, div = ref1.div, canvas = ref1.canvas;
 
 	c('React version', React.version);
 
 	c('dispatcher', dispatcher);
 
-	glyph_000 = __webpack_require__(353)();
-
-	glyph_001 = __webpack_require__(357)();
-
-	board_000 = __webpack_require__(356)();
-
-	dragoon_store = __webpack_require__(354);
-
-	kestrel_store = __webpack_require__(355);
-
-	market_garden = rr({
-	  componentWillUnmount: function() {
-	    return window.onresize = null;
-	  },
-	  set_boundingRect: function() {
-	    var bounding_rect;
-	    this.forceUpdate();
-	    bounding_rect = React_DOM.findDOMNode(this).getBoundingClientRect();
-	    return this.setState({
-	      view_width: bounding_rect.width,
-	      view_height: bounding_rect.height
-	    });
-	  },
-	  debounce: function(func, wait, immediate) {
-	    var timeout;
-	    timeout = 'scoped here';
-	    return function() {
-	      var args, callNow, context, later;
-	      context = this;
-	      args = arguments;
-	      later = function() {
-	        timeout = null;
-	        if (!immediate) {
-	          return func.apply(context, args);
-	        }
-	      };
-	      callNow = immediate && !timeout;
-	      clearTimeout(timeout);
-	      timeout = setTimeout(later, wait);
-	      if (callNow) {
-	        return func.apply(context, args);
-	      }
-	    };
-	  },
-	  debounced_set_boundingRect: function() {
-	    return this.debounce(this.set_boundingRect, 100)();
-	  },
+	gl_tablet = rr({
+	  gl: null,
 	  componentDidMount: function() {
-	    this.set_boundingRect();
-	    return window.onresize = this.debounced_set_boundingRect;
+	    var gla, imp_000, imp_003, initShaders, initWebGL, shader_000;
+	    c('Gladder', Gladder);
+	    imp_003 = React_DOM.findDOMNode(this.refs.canvas_000);
+	    gla = new Gladder({
+	      canvas: imp_003
+	    });
+	    c('gla', gla);
+	    initWebGL = function(canvas) {
+	      var gl;
+	      gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+	      return gl;
+	    };
+	    c('did mount');
+	    imp_000 = React_DOM.findDOMNode(this.refs.canvas_000);
+	    this.gl = initWebGL(imp_000);
+	    c('@gl', this.gl);
+	    this.gl.clearColor(0.0, 0.0, 0.0, 1.0);
+	    this.gl.enable(gl.DEPTH_TEST);
+	    this.gl.depthFunc(gl.LEQUAL);
+	    this.gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+	    initShaders = function() {
+	      var fragmentShader, shaderProgram, vertexPositionAttribute, vertexShader;
+	      fragmentShader = getShader(this.gl, "shader-fs");
+	      vertexShader = getShader(this.gl, "shader-vs");
+	      shaderProgram = this.gl.createProgram();
+	      this.gl.attachShader(shaderProgram, vertexShader);
+	      this.gl.attachShader(shaderProgram, fragmentShader);
+	      this.gl.linkProgram(shaderProgram);
+	      this.gl.useProgram(shaderProgram);
+	      vertexPositionAttribute = this.gl.getAttribLocation(shaderProgram, "aVertexPosition");
+	      return this.gl.enableVertexAttribArray(vertexPositionAttribute);
+	    };
+	    return shader_000 = function() {};
 	  },
 	  render: function() {
-	    var from_root_payload_002, main_div, ref1;
-	    from_root_payload_002 = (function(_this) {
-	      return function() {
-	        var M, smaller, z;
-	        smaller = _this.state.view_width < _this.state.view_height ? _this.state.view_width : _this.state.view_height;
-	        z = smaller / 200;
-	        M = [[z, 0, _this.state.view_width / 2], [0, -z, _this.state.view_height / 2], [0, 0, 1]];
-	        return {
-	          imm_M: Imm.fromJS(M),
-	          from_root: true
-	        };
-	      };
-	    })(this);
+	    var main_div, rayy_000;
+	    rayy_000 = new Float32Array([-1.0, -1.0, 1.0, -1.0, -1.0, 1.0, -1.0, 1.0, 1.0, -1.0, 1.0, 1.0]);
+	    c('rayy_000', rayy_000);
 	    main_div = function() {
 	      return {
 	        style: {
@@ -146,15 +122,15 @@
 	        }
 	      };
 	    };
-	    if (!((ref1 = this.state) != null ? ref1.view_width : void 0)) {
-	      return div(main_div());
-	    } else {
-	      return div(main_div(), glyph_001());
-	    }
+	    return div(main_div(), canvas({
+	      ref: 'canvas_000',
+	      width: 640,
+	      height: 480
+	    }));
 	  }
 	});
 
-	React_DOM.render(market_garden(), imp_root);
+	React_DOM.render(gl_tablet(), imp_root);
 
 
 /***/ },
@@ -2069,6 +2045,10 @@
 
 	flux = __webpack_require__(341);
 
+	__webpack_require__(353);
+
+	c('glMatrix', glMatrix);
+
 	c("Three", THREE);
 
 	Dispatcher = flux.Dispatcher;
@@ -2081,6 +2061,7 @@
 
 	module.exports = function() {
 	  return {
+	    Gladder: Gladder,
 	    EventEmitter: EventEmitter,
 	    dispatcher: dispatcher,
 	    flux: flux,
@@ -46468,246 +46449,921 @@
 
 /***/ },
 /* 353 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var Bluebird, Imm, React, React_DOM, _, assign, c, circle, clipPath, d, defs, dispatcher, dragoon_store, ellipse, feBlend, feGaussianBlur, feMerge, feMergeNode, feOffset, filter, flux, foreignObject, g, glyph, image, input, kestrel_store, keys, line, linearGradient, math, mm, path, pattern, polygon, polyline, radialGradient, rect, ref, ref1, rr, shortid, stop, svg, svg_bp, text;
+	var REQUIRED, getElement, getGl, isArray, isInteger, isString, processArgs, wrapInDebugContext,
+	  hasProp = {}.hasOwnProperty;
 
-	ref = __webpack_require__(20)(), dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
-
-	ref1 = React.DOM, svg = ref1.svg, circle = ref1.circle, rect = ref1.rect, line = ref1.line, input = ref1.input, defs = ref1.defs, clipPath = ref1.clipPath, linearGradient = ref1.linearGradient, stop = ref1.stop, g = ref1.g, path = ref1.path, d = ref1.d, polygon = ref1.polygon, image = ref1.image, pattern = ref1.pattern, filter = ref1.filter, feBlend = ref1.feBlend, feOffset = ref1.feOffset, polyline = ref1.polyline, feGaussianBlur = ref1.feGaussianBlur, feMergeNode = ref1.feMergeNode, feMerge = ref1.feMerge, radialGradient = ref1.radialGradient, foreignObject = ref1.foreignObject, text = ref1.text, ellipse = ref1.ellipse;
-
-	dragoon_store = __webpack_require__(354);
-
-	kestrel_store = __webpack_require__(355);
-
-	glyph = rr({
-	  _on_change_000: function() {
-	    c('market glyph listener got emmision from kestrel');
-	    return this.setState({
-	      text: "pow wow"
-	    });
-	  },
-	  componentDidMount: function() {
-	    return kestrel_store.add_changeListener(this._on_change_000);
-	  },
-	  getInitialState: function() {
-	    return {
-	      text: "initial hello"
-	    };
-	  },
-	  shouldComponentUpdate: function(nextProps, nextState) {
-	    var imm_M, next_imm_M;
-	    imm_M = this.props.imm_M;
-	    next_imm_M = nextProps.imm_M;
-	    if ((Imm.is(imm_M, next_imm_M)) && (this.state.text === nextState.text)) {
-	      return false;
-	    } else {
-	      return true;
-	    }
-	  },
-	  handle_click_000: function() {
-	    c('handling 000');
-	    return dispatcher.dispatch({
-	      myType: 'hello type 0',
-	      type: 'hello type 1',
-	      some_other_property: 'another property'
-	    });
-	  },
-	  handle_click_001: function() {
-	    return c('handling 001');
-	  },
-	  render: function() {
-	    var M, circ_002, t__c;
-	    M = this.props.imm_M.toJS();
-	    t__c = (function() {
-	      var nc;
-	      nc = {
-	        cx: -40,
-	        cy: 14,
-	        r: 20
-	      };
-	      return {
-	        origin: mm(M, [nc.cx, nc.cy, 1]),
-	        radius: nc.r * M[0][0]
-	      };
-	    })();
-	    circ_002 = (function() {
-	      var nc;
-	      nc = {
-	        cx: 10,
-	        cy: -40,
-	        r: 20
-	      };
-	      return {
-	        origin: mm(M, [nc.cx, nc.cy, 1]),
-	        radius: nc.r * M[0][0]
-	      };
-	    })();
-	    return svg(svg_bp, circle({
-	      cx: t__c.origin[0],
-	      cy: t__c.origin[1],
-	      r: t__c.radius,
-	      fill: 'pink',
-	      stroke: 'white',
-	      onClick: this.handle_click_000
-	    }), circle({
-	      cx: circ_002.origin[0],
-	      cy: circ_002.origin[1],
-	      r: circ_002.radius,
-	      fill: 'blue',
-	      stroke: 'purple',
-	      onClick: this.handle_click_001
-	    }), text({
-	      x: circ_002.origin[0],
-	      y: circ_002.origin[1],
-	      fill: 'white',
-	      fontSize: 10 * M[0][0]
-	    }, this.state.text));
-	  }
-	});
-
-	module.exports = function() {
-	  return glyph;
+	isString = function(x) {
+	  return Object.prototype.toString.call(x) === '[object String]';
 	};
 
-
-/***/ },
-/* 354 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Bluebird, EventEmitter, Imm, React, React_DOM, _, assign, c, dispatcher, dragoon_store, flux, kestrel_store, keys, math, mm, ref, rr, shortid, svg_bp;
-
-	ref = __webpack_require__(20)(), EventEmitter = ref.EventEmitter, dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
-
-	kestrel_store = __webpack_require__(355);
-
-	dragoon_store = assign({}, EventEmitter.prototype, {
-	  emit_changeEvent: function() {
-	    c('dragoon change event');
-	    return this.emit("CHANGE");
-	  },
-	  test_000: function() {
-	    return c("we're in dragoon_store in the test_000 function.");
-	  },
-	  test_001: function() {}
-	});
-
-	dragoon_store.dispatchToken = dispatcher.register(function(action) {
-	  c('dragoon got an action', action);
-	  dispatcher.waitFor([kestrel_store.dispatchToken]);
-	  return dragoon_store.emit_changeEvent();
-	});
-
-	module.exports = dragoon_store;
-
-
-/***/ },
-/* 355 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Bluebird, EventEmitter, Imm, React, React_DOM, _, assign, c, dispatcher, flux, kestrel_store, keys, math, mm, ref, rr, shortid, svg_bp;
-
-	ref = __webpack_require__(20)(), EventEmitter = ref.EventEmitter, dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
-
-	kestrel_store = assign({}, EventEmitter.prototype, {
-	  emit_changeEvent: function() {
-	    c('kestrel change event');
-	    return this.emit("CHANGE");
-	  },
-	  add_changeListener: function(cb) {
-	    c('adding change listener', cb);
-	    return this.on("CHANGE", cb);
-	  },
-	  test_000: function() {
-	    return c("we're in dragoon_store in the test_000 function.");
-	  },
-	  test_001: function() {}
-	});
-
-	kestrel_store.dispatchToken = dispatcher.register(function(action) {
-	  c('kestrel got an action', action);
-	  return kestrel_store.emit_changeEvent();
-	});
-
-	module.exports = kestrel_store;
-
-
-/***/ },
-/* 356 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Bluebird, Imm, React, React_DOM, _, assign, board, c, circle, clipPath, d, defs, dispatcher, ellipse, feBlend, feGaussianBlur, feMerge, feMergeNode, feOffset, filter, flux, foreignObject, g, image, input, keys, line, linearGradient, math, mm, path, pattern, polygon, polyline, radialGradient, rect, ref, ref1, rr, shortid, stop, svg, svg_bp, text;
-
-	ref = __webpack_require__(20)(), dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
-
-	ref1 = React.DOM, svg = ref1.svg, circle = ref1.circle, rect = ref1.rect, line = ref1.line, input = ref1.input, defs = ref1.defs, clipPath = ref1.clipPath, linearGradient = ref1.linearGradient, stop = ref1.stop, g = ref1.g, path = ref1.path, d = ref1.d, polygon = ref1.polygon, image = ref1.image, pattern = ref1.pattern, filter = ref1.filter, feBlend = ref1.feBlend, feOffset = ref1.feOffset, polyline = ref1.polyline, feGaussianBlur = ref1.feGaussianBlur, feMergeNode = ref1.feMergeNode, feMerge = ref1.feMerge, radialGradient = ref1.radialGradient, foreignObject = ref1.foreignObject, text = ref1.text, ellipse = ref1.ellipse;
-
-	board = rr({
-	  render: function() {
-	    return svg(svg_bp);
-	  }
-	});
-
-	module.exports = function() {
-	  return board;
+	isArray = function(x) {
+	  return Object.prototype.toString.call(x) === '[object Array]';
 	};
 
+	isInteger = function(x) {
+	  return x === Math.floor(x);
+	};
 
-/***/ },
-/* 357 */
-/***/ function(module, exports, __webpack_require__) {
+	getElement = function(element) {
+	  var id;
+	  if (element == null) {
+	    throw new Error('Element is null or undefined');
+	  }
+	  if (element.innerHTML != null) {
+	    return element;
+	  }
+	  id = element;
+	  element = document.getElementById(id);
+	  if (element == null) {
+	    throw new Error("Element " + id + " is neither a DOM element nor an id");
+	  }
+	  return element;
+	};
 
-	var Bluebird, Imm, React, React_DOM, _, assign, c, circle, clipPath, d, defs, dispatcher, div, dragoon_store, ellipse, feBlend, feGaussianBlur, feMerge, feMergeNode, feOffset, filter, flux, foreignObject, g, glyph, image, input, kestrel_store, keys, line, linearGradient, math, mm, path, pattern, polygon, polyline, radialGradient, rect, ref, ref1, rr, shortid, stop, svg, svg_bp, text;
+	REQUIRED = new Object();
 
-	ref = __webpack_require__(20)(), dispatcher = ref.dispatcher, flux = ref.flux, _ = ref._, c = ref.c, React = ref.React, React_DOM = ref.React_DOM, Imm = ref.Imm, Bluebird = ref.Bluebird, rr = ref.rr, shortid = ref.shortid, assign = ref.assign, keys = ref.keys, math = ref.math, mm = ref.mm, svg_bp = ref.svg_bp;
-
-	ref1 = React.DOM, div = ref1.div, svg = ref1.svg, circle = ref1.circle, rect = ref1.rect, line = ref1.line, input = ref1.input, defs = ref1.defs, clipPath = ref1.clipPath, linearGradient = ref1.linearGradient, stop = ref1.stop, g = ref1.g, path = ref1.path, d = ref1.d, polygon = ref1.polygon, image = ref1.image, pattern = ref1.pattern, filter = ref1.filter, feBlend = ref1.feBlend, feOffset = ref1.feOffset, polyline = ref1.polyline, feGaussianBlur = ref1.feGaussianBlur, feMergeNode = ref1.feMergeNode, feMerge = ref1.feMerge, radialGradient = ref1.radialGradient, foreignObject = ref1.foreignObject, text = ref1.text, ellipse = ref1.ellipse;
-
-	dragoon_store = __webpack_require__(354);
-
-	kestrel_store = __webpack_require__(355);
-
-	glyph = rr({
-	  _on_change_000: function() {
-	    c('market glyph listener got emmision from kestrel');
-	    return this.setState({
-	      text: "pow wow"
-	    });
-	  },
-	  componentDidMount: function() {
-	    return kestrel_store.add_changeListener(this._on_change_000);
-	  },
-	  getInitialState: function() {
-	    return {
-	      text: "initial hello"
-	    };
-	  },
-	  shouldComponentUpdate: function(nextProps, nextState) {
-	    var imm_M, next_imm_M;
-	    imm_M = this.props.imm_M;
-	    next_imm_M = nextProps.imm_M;
-	    if ((Imm.is(imm_M, next_imm_M)) && (this.state.text === nextState.text)) {
-	      return false;
-	    } else {
-	      return true;
+	processArgs = function(args, defaultArgs) {
+	  var key, value;
+	  for (key in defaultArgs) {
+	    if (!hasProp.call(defaultArgs, key)) continue;
+	    value = defaultArgs[key];
+	    if (args[key] == null) {
+	      if (value === REQUIRED) {
+	        throw new Error("Argument " + key + " is required");
+	      }
+	      args[key] = value;
 	    }
-	  },
-	  handle_click_000: function() {
-	    c('handling 000');
-	    return dispatcher.dispatch({
-	      myType: 'hello type 0',
-	      type: 'hello type 1',
-	      some_other_property: 'another property'
-	    });
-	  },
-	  handle_click_001: function() {
-	    return c('handling 001');
-	  },
-	  render: function() {}
-	});
+	  }
+	};
 
-	module.exports = function() {
-	  return glyph;
+	getGl = function(args) {
+	  var canvas, context_name, gl, j, len, ref;
+	  processArgs(args, {
+	    canvas: REQUIRED,
+	    debug: false,
+	    errorCallback: null,
+	    callCallback: null
+	  });
+	  canvas = getElement(args.canvas);
+	  ref = ['webgl', 'experimental-webgl', 'moz-webgl', 'webkit-3d'];
+	  for (j = 0, len = ref.length; j < len; j++) {
+	    context_name = ref[j];
+	    gl = canvas.getContext(context_name);
+	    if (gl) {
+	      break;
+	    }
+	  }
+	  if (gl == null) {
+	    throw new Error('WebGL not supported');
+	  }
+	  if (args.debug) {
+	    gl = wrapInDebugContext(gl, args.errorCallback, args.callCallback);
+	  }
+	  return gl;
+	};
+
+	wrapInDebugContext = function(gl, errorCallback, callCallback) {
+	  var onCall, onError;
+	  if (typeof WebGLDebugUtils === "undefined" || WebGLDebugUtils === null) {
+	    throw new Error('To use debug mode, you need to load webgl-debug.js. Get it from http://www.khronos.org/webgl/wiki/Debugging');
+	  }
+	  onError = null;
+	  if (errorCallback != null) {
+	    onError = function(err, funcName, passedArguments) {
+	      return errorCallback(((WebGLDebugUtils.glEnumToString(err)) + " in call ") + (funcName + "(" + (Array.prototype.slice.call(passedArguments).join(', ')) + ")"));
+	    };
+	  }
+	  onCall = null;
+	  if (callCallback != null) {
+	    onCall = function(funcName, passedArguments) {
+	      return callCallback(funcName + "(" + (Array.prototype.slice.call(passedArguments).join(', ')) + ")");
+	    };
+	  }
+	  return WebGLDebugUtils.makeDebugContext(gl, onError, onCall);
+	};
+
+	window.Gladder = function(args) {
+	  var Attribute, REQUEST_ANIMATION_FRAME, TextureUnit, Uniform, activeTextureUnit, bindFramebuffer, boundBuffer, boundFramebuffer, capabilityState, clearColor, clearDepth, clearStencil, compileShader, getActiveTextureUnit, getGLBufferType, getScriptContents, gl, linkProgram, mainLoopExiting, setViewport, sizeOfType, textureUnits, usedProgram, viewport;
+	  gl = getGl(args);
+	  this.canvas = gl.canvas;
+	  this.Capability = {
+	    BLEND: gl.BLEND,
+	    CULL_FACE: gl.CULL_FACE,
+	    DEPTH_TEST: gl.DEPTH_TEST,
+	    DITHER: gl.DITHER,
+	    POLYGON_OFFSET_FILL: gl.POLYGON_OFFSET_FILL,
+	    SAMPLE_ALPHA_TO_COVERAGE: gl.SAMPLE_ALPHA_TO_COVERAGE,
+	    SAMPLE_COVERAGE: gl.SAMPLE_COVERAGE,
+	    SCISSOR_TEST: gl.SCISSOR_TEST,
+	    STENCIL_TEST: gl.STENCIL_TEST
+	  };
+	  capabilityState = {};
+	  capabilityState[this.Capability.DITHER] = true;
+	  this.enable = function() {
+	    var cap, j, len, results;
+	    results = [];
+	    for (j = 0, len = arguments.length; j < len; j++) {
+	      cap = arguments[j];
+	      if (!capabilityState[cap]) {
+	        gl.enable(cap);
+	        results.push(capabilityState[cap] = true);
+	      } else {
+	        results.push(void 0);
+	      }
+	    }
+	    return results;
+	  };
+	  this.disable = function() {
+	    var cap, j, len, results;
+	    results = [];
+	    for (j = 0, len = arguments.length; j < len; j++) {
+	      cap = arguments[j];
+	      if (capabilityState[cap]) {
+	        gl.disable(cap);
+	        results.push(capabilityState[cap] = false);
+	      } else {
+	        results.push(void 0);
+	      }
+	    }
+	    return results;
+	  };
+	  REQUEST_ANIMATION_FRAME = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback, element) {
+	    return window.setTimeout(callback, 1000 / 60);
+	  };
+	  this.requestAnimationFrame = function(callback) {
+	    return REQUEST_ANIMATION_FRAME.call(window, callback, gl.canvas);
+	  };
+	  mainLoopExiting = null;
+	  this.mainLoop = function(callback) {
+	    var drawFrame, last;
+	    mainLoopExiting = false;
+	    last = Date.now();
+	    drawFrame = function() {
+	      var delta, now;
+	      now = Date.now();
+	      delta = Math.max(0, now - last);
+	      last = now;
+	      callback(delta);
+	      if (!mainLoopExiting) {
+	        return gla.requestAnimationFrame(drawFrame, gl.canvas);
+	      }
+	    };
+	    return this.requestAnimationFrame(drawFrame, gl.canvas);
+	  };
+	  this.exitMainLoop = function() {
+	    return mainLoopExiting = true;
+	  };
+	  this.flush = function() {
+	    return gl.flush();
+	  };
+	  this.finish = function() {
+	    return gl.finish();
+	  };
+	  viewport = {
+	    x: 0,
+	    y: 0,
+	    width: gl.canvas.width,
+	    height: gl.canvas.height
+	  };
+	  setViewport = function(args) {
+	    processArgs(args, {
+	      x: 0,
+	      y: 0,
+	      width: gl.canvas.width,
+	      height: gl.canvas.height
+	    });
+	    if (viewport.x !== args.x || viewport.y !== args.y || viewport.width !== args.width || viewport.height !== args.height) {
+	      gl.viewport(args.x, args.y, args.width, args.height);
+	      viewport.x = x;
+	      viewport.y = y;
+	      viewport.width = width;
+	      return viewport.height = height;
+	    }
+	  };
+	  getGLBufferType = function(arrayBufferViewType) {
+	    switch (arrayBufferViewType) {
+	      case Int8Array:
+	        return gl.BYTE;
+	      case Uint8Array:
+	        return gl.UNSIGNED_BYTE;
+	      case Int16Array:
+	        return gl.SHORT;
+	      case Uint16Array:
+	        return gl.UNSIGNED_SHORT;
+	      case Int32Array:
+	        return gl.FIXED;
+	      case Uint32Array:
+	        return gl.FIXED;
+	      case Float32Array:
+	        return gl.FLOAT;
+	      default:
+	        throw new Error("Unsupported buffer type " + args.type);
+	    }
+	  };
+	  sizeOfType = function(type) {
+	    switch (type) {
+	      case gla.Buffer.Type.BYTE:
+	      case gla.Buffer.Type.UNSIGNED_BYTE:
+	        return 1;
+	      case gla.Buffer.Type.SHORT:
+	      case gla.Buffer.Type.UNSIGNED_SHORT:
+	        return 2;
+	      case gla.Buffer.Type.FIXED:
+	      case gla.Buffer.Type.FLOAT:
+	        return 4;
+	      default:
+	        throw new Error("Unknown type " + type);
+	    }
+	  };
+	  this.BufferView = function(buffer, args) {
+	    var typeSize;
+	    processArgs(args, {
+	      size: REQUIRED,
+	      type: gla.Buffer.Type.FLOAT,
+	      normalized: false,
+	      stride: 0,
+	      offset: 0
+	    });
+	    typeSize = sizeOfType(args.type);
+	    if (args.stride > 0 && args.stride < typeSize * args.size) {
+	      throw new Error(("stride == " + args.stride + ", if nonzero, must be at least ") + ("size * sizeof(type) == " + args.size + " * " + typeSize + " == " + (args.size * args.typeSize)));
+	    }
+	    if (!isInteger(args.stride / typeSize)) {
+	      throw new Error("stride == " + args.stride + " must be a multiple of sizeof(type) == " + typeSize);
+	    }
+	    if (!isInteger(args.offset / typeSize)) {
+	      throw new Error("offset == " + args.offset + " must be a multiple of sizeof(type) == " + typeSize);
+	    }
+	    this.buffer = buffer;
+	    this.size = args.size;
+	    this.type = args.type;
+	    this.normalized = args.normalized;
+	    this.stride = args.stride;
+	    this.offset = args.offset;
+	    this.numValues = function() {
+	      if (this.stride > 0) {
+	        return this.buffer.numBytes / this.stride * this.size;
+	      } else {
+	        return this.buffer.numBytes / sizeOfType(this.type);
+	      }
+	    };
+	    this.numItems = function() {
+	      if (this.stride > 0) {
+	        return this.buffer.numBytes / this.stride;
+	      } else {
+	        return this.buffer.numBytes / (sizeOfType(this.type) * this.size);
+	      }
+	    };
+	  };
+	  boundBuffer = {};
+	  this.Buffer = function(args) {
+	    var glBuffer, key, ref, view;
+	    processArgs(args, {
+	      target: gla.Buffer.Target.ARRAY_BUFFER,
+	      data: null,
+	      size: null,
+	      usage: gla.Buffer.Usage.STATIC_DRAW,
+	      views: {}
+	    });
+	    glBuffer = gl.createBuffer();
+	    this.target = args.target;
+	    this.usage = args.usage;
+	    this.numBytes = null;
+	    this.bind = function() {
+	      if (boundBuffer[this.target] !== this) {
+	        gl.bindBuffer(this.target, glBuffer);
+	        return boundBuffer[this.target] = this;
+	      }
+	    };
+	    this.set = function(args) {
+	      var data;
+	      processArgs(args, {
+	        data: null,
+	        size: null,
+	        offset: null,
+	        usage: this.usage
+	      });
+	      this.bind();
+	      if (args.offset === null) {
+	        if (!(args.data === null ^ args.size === null)) {
+	          throw new Error('Must set exactly one of data and size');
+	        }
+	        if (args.data !== null) {
+	          data = args.data;
+	          if (isArray(data)) {
+	            data = new Float32Array(data);
+	          }
+	          gl.bufferData(this.target, data, args.usage);
+	          this.numBytes = data.byteLength;
+	        } else {
+	          gl.bufferData(this.target, args.size, args.usage);
+	          this.numBytes = args.size;
+	        }
+	      } else {
+	        if (args.usage !== null) {
+	          throw new Error('Cannot set usage and offset at the same time');
+	        }
+	        gl.bufferSubData(this.target, args.offset, args.data);
+	      }
+	      return this.usage = args.usage;
+	    };
+	    this.addView = function(name, args) {
+	      return this.views[name] = new gla.BufferView(this, args);
+	    };
+	    this.removeView = function(name) {
+	      return delete this.views[name];
+	    };
+	    if (args.data !== null || args.size !== null) {
+	      this.set({
+	        data: args.data,
+	        size: args.size,
+	        usage: this.usage
+	      });
+	    }
+	    this.views = {};
+	    ref = args.views;
+	    for (key in ref) {
+	      if (!hasProp.call(ref, key)) continue;
+	      view = ref[key];
+	      this.views[key] = new gla.BufferView(this, view);
+	    }
+	  };
+	  this.Buffer.Target = {
+	    ARRAY_BUFFER: gl.ARRAY_BUFFER,
+	    ELEMENT_ARRAY_BUFFER: gl.ELEMENT_ARRAY_BUFFER
+	  };
+	  this.Buffer.Usage = {
+	    DYNAMIC_DRAW: gl.DYNAMIC_DRAW,
+	    STATIC_DRAW: gl.STATIC_DRAW,
+	    STREAM_DRAW: gl.STREAM_DRAW
+	  };
+	  this.Buffer.Type = {
+	    BYTE: gl.BYTE,
+	    UNSIGNED_BYTE: gl.UNSIGNED_BYTE,
+	    SHORT: gl.SHORT,
+	    UNSIGNED_SHORT: gl.UNSIGNED_SHORT,
+	    FIXED: gl.FIXED,
+	    FLOAT: gl.FLOAT
+	  };
+	  getScriptContents = function(script) {
+	    return getElement(script).innerHTML;
+	  };
+	  compileShader = function(glShader, source) {
+	    gl.shaderSource(glShader, source);
+	    gl.compileShader(glShader);
+	    if (!gl.getShaderParameter(glShader, gl.COMPILE_STATUS)) {
+	      throw new Error("Shader compile error:\n" + (gl.getShaderInfoLog(glShader)));
+	    }
+	  };
+	  this.Shader = function(args) {
+	    var e, glShader, source, type;
+	    processArgs(args, {
+	      source: REQUIRED,
+	      type: REQUIRED
+	    });
+	    try {
+	      source = getScriptContents(args.source);
+	    } catch (_error) {
+	      e = _error;
+	      source = args.source;
+	    }
+	    type = args.type;
+	    glShader = gl.createShader(type);
+	    compileShader(glShader, source);
+	    this.attach = function(glProgram) {
+	      return gl.attachShader(glProgram, glShader);
+	    };
+	  };
+	  this.Shader.Type = {
+	    VERTEX_SHADER: gl.VERTEX_SHADER,
+	    FRAGMENT_SHADER: gl.FRAGMENT_SHADER
+	  };
+	  Uniform = function(glUniform, type) {
+	    var setter, suffix, vSetter, vSuffix, value;
+	    value = null;
+	    this.type = type;
+	    suffix = {
+	      'bool': '1i',
+	      'int': '1i',
+	      'ivec2': '2i',
+	      'ivec3': '3i',
+	      'ivec4': '4i',
+	      'float': '1f',
+	      'vec2': '2f',
+	      'vec3': '3f',
+	      'vec4': '4f',
+	      'mat2': '2f',
+	      'mat3': '3f',
+	      'mat4': '4f',
+	      'sampler2D': '1i',
+	      'samplerCube': '1i'
+	    }[type];
+	    if (suffix == null) {
+	      throw new Error("Unknown uniform type " + type);
+	    }
+	    vSuffix = suffix + 'v';
+	    if (type.substring(0, 3) === 'mat') {
+	      vSetter = gl['uniformMatrix' + vSuffix];
+	      this.set = function(matrix) {
+	        return vSetter.call(gl, glUniform, false, matrix);
+	      };
+	    } else {
+	      setter = gl['uniform' + suffix];
+	      vSetter = gl['uniform' + vSuffix];
+	      this.set = function() {
+	        args = Array.prototype.slice.call(arguments);
+	        args.unshift(glUniform);
+	        if (args[args.length - 1][0] !== void 0) {
+	          vSetter.apply(gl, args);
+	        } else if (setter !== null) {
+	          setter.apply(gl, args);
+	        } else {
+	          throw new Error("Uniform cannot be set from " + (args.join(', ')));
+	        }
+	        args.shift();
+	        return value = args;
+	      };
+	    }
+	    this.get = function() {
+	      return value;
+	    };
+	  };
+	  Attribute = function(glAttribute, type) {
+	    var arrayEnabled, enableArray, setter, suffix, vSetter, vSuffix, value;
+	    value = null;
+	    arrayEnabled = false;
+	    suffix = {
+	      'float': '1f',
+	      'vec2': '2f',
+	      'vec3': '3f',
+	      'vec4': '4f',
+	      'int': '1i',
+	      'ivec2': '2i',
+	      'ivec3': '3i',
+	      'ivec4': '4i'
+	    }[type];
+	    if (suffix == null) {
+	      throw new Error("Unknown attribute type " + type);
+	    }
+	    vSuffix = suffix + 'v';
+	    setter = gl['vertexAttrib' + suffix];
+	    vSetter = setter + 'v';
+	    enableArray = function(enabled) {
+	      if (enabled !== arrayEnabled) {
+	        if (enabled) {
+	          gl.enableVertexAttribArray(glAttribute);
+	        } else {
+	          gl.disableVertexAttribArray(glAttribute);
+	        }
+	        return arrayEnabled = enabled;
+	      }
+	    };
+	    this.get = function() {
+	      return value;
+	    };
+	    this.set = function() {
+	      var bufferView;
+	      args = Array.prototype.slice.call(arguments);
+	      args.unshift(this.glUniform);
+	      if (args[args.length - 1][0] !== void 0) {
+	        enableArray(false);
+	        vSetter.apply(gl, args);
+	      } else if (args[1] instanceof gla.BufferView) {
+	        bufferView = args[1];
+	        bufferView.buffer.bind();
+	        enableArray(true);
+	        gl.vertexAttribPointer(glAttribute, bufferView.size, bufferView.type, bufferView.normalized, bufferView.stride, bufferView.offset);
+	      } else if (setter !== null) {
+	        enableArray(false);
+	        setter.apply(gl, args);
+	      } else {
+	        throw new Error("Uniform cannot be set from " + (args.join(', ')));
+	      }
+	      args.shift();
+	      return value = args;
+	    };
+	  };
+	  linkProgram = function(glProgram, vertexShader, fragmentShader) {
+	    vertexShader.attach(glProgram);
+	    fragmentShader.attach(glProgram);
+	    gl.linkProgram(glProgram);
+	    if (!gl.getProgramParameter(glProgram, gl.LINK_STATUS)) {
+	      throw new Error("Program link error:\n" + (gl.getProgramInfoLog(glProgram)));
+	    }
+	  };
+	  usedProgram = null;
+	  this.Program = function(args) {
+	    var fragmentShader, glAttribute, glProgram, glUniform, name, ref, ref1, type, vertexShader;
+	    processArgs(args, {
+	      vertexShader: REQUIRED,
+	      fragmentShader: REQUIRED,
+	      uniforms: {},
+	      attributes: {}
+	    });
+	    glProgram = gl.createProgram();
+	    if (args.vertexShader instanceof gla.Shader) {
+	      vertexShader = args.vertexShader;
+	    } else {
+	      vertexShader = new gla.Shader({
+	        source: args.vertexShader,
+	        type: gla.Shader.Type.VERTEX_SHADER
+	      });
+	    }
+	    if (args.fragmentShader instanceof gla.Shader) {
+	      fragmentShader = args.fragmentShader;
+	    } else {
+	      fragmentShader = new gla.Shader({
+	        source: args.fragmentShader,
+	        type: gla.Shader.Type.FRAGMENT_SHADER
+	      });
+	    }
+	    linkProgram(glProgram, vertexShader, fragmentShader);
+	    this.uniforms = {};
+	    ref = args.uniforms;
+	    for (name in ref) {
+	      if (!hasProp.call(ref, name)) continue;
+	      type = ref[name];
+	      glUniform = gl.getUniformLocation(glProgram, name);
+	      if (glUniform == null) {
+	        console.log("Warning: uniform " + name + " not found in program");
+	      }
+	      this.uniforms[name] = new Uniform(glUniform, type);
+	    }
+	    this.attributes = {};
+	    ref1 = args.attributes;
+	    for (name in ref1) {
+	      if (!hasProp.call(ref1, name)) continue;
+	      type = ref1[name];
+	      glAttribute = gl.getAttribLocation(glProgram, name);
+	      if (glAttribute == null) {
+	        console.log("Warning: attribute " + name + " not found in program");
+	      }
+	      this.attributes[name] = new Attribute(glAttribute, type);
+	    }
+	    this.use = function() {
+	      if (this !== usedProgram) {
+	        gl.useProgram(glProgram);
+	        return usedProgram = this;
+	      }
+	    };
+	  };
+	  activeTextureUnit = 0;
+	  TextureUnit = function(index) {
+	    var activate, glUnit;
+	    glUnit = gl.TEXTURE0 + index;
+	    this.bound = {};
+	    activate = function() {
+	      if (activeTextureUnit !== index) {
+	        gl.activeTexture(glUnit);
+	        return activeTextureUnit = index;
+	      }
+	    };
+	    this.bind = function(target, texture) {
+	      if (this.bound[target] !== texture) {
+	        activate();
+	        gl.bindTexture(target, texture._id);
+	        return this.bound[target] = texture;
+	      }
+	    };
+	  };
+	  textureUnits = (function() {
+	    var count, i, j, ref, results;
+	    count = gl.getParameter(gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS);
+	    results = [];
+	    for (i = j = 0, ref = count; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {
+	      results.push(new TextureUnit(i));
+	    }
+	    return results;
+	  })();
+	  getActiveTextureUnit = function() {
+	    return textureUnits[activeTextureUnit];
+	  };
+	  this.Texture = function(args) {
+	    var bind, glTexture, parameters, setParameter, target;
+	    processArgs(args, {
+	      target: gla.Texture.Target.TEXTURE_2D,
+	      minFilter: gla.Texture.Filter.NEAREST_MIPMAP_LINEAR,
+	      magFilter: gla.Texture.Filter.LINEAR,
+	      wrapS: gla.Texture.Wrap.REPEAT,
+	      wrapT: gla.Texture.Wrap.REPEAT
+	    });
+	    glTexture = gl.createTexture();
+	    this._id = glTexture;
+	    target = args.target;
+	    parameters = {};
+	    bind = (function(_this) {
+	      return function() {
+	        return getActiveTextureUnit().bind(target, _this);
+	      };
+	    })(this);
+	    setParameter = (function(_this) {
+	      return function(parameter, value) {
+	        if (parameters[parameter] !== value) {
+	          bind();
+	          gl.texParameteri(target, parameter, value);
+	          return parameters[parameter] = value;
+	        }
+	      };
+	    })(this);
+	    this.setFilter = function(min, mag) {
+	      setParameter(gl.TEXTURE_MIN_FILTER, min);
+	      return setParameter(gl.TEXTURE_MAG_FILTER, mag != null ? mag : min);
+	    };
+	    this.setWrap = function(s, t) {
+	      setParameter(gl.TEXTURE_WRAP_S, s);
+	      return setParameter(gl.TEXTURE_WRAP_T, t != null ? t : s);
+	    };
+	    this.setImage = (function(_this) {
+	      return function(args) {
+	        var image;
+	        processArgs(args, {
+	          width: null,
+	          height: null,
+	          target: gla.Texture.Target.TEXTURE_2D,
+	          level: 0,
+	          format: gla.Texture.Format.RGBA,
+	          type: gla.Texture.Type.UNSIGNED_BYTE,
+	          image: null,
+	          generateMipmap: true
+	        });
+	        if (args.image !== null) {
+	          if (isString(args.image)) {
+	            image = new Image();
+	            image.onload = function() {
+	              _this.setImage({
+	                target: args.target,
+	                level: args.level,
+	                format: args.format,
+	                type: args.type,
+	                image: image,
+	                generateMipmap: args.generateMipmap
+	              });
+	              if (_this.onload != null) {
+	                return _this.onload();
+	              }
+	            };
+	            image.src = args.image;
+	          } else {
+	            bind();
+	            gl.texImage2D(args.target, args.level, args.format, args.format, args.type, args.image);
+	            if (args.generateMipmap) {
+	              gl.generateMipmap(args.target);
+	            }
+	          }
+	        } else {
+	          if (args.width === null || args.height === null) {
+	            throw new Error('If image is not specified, width and height are mandatory');
+	          }
+	          bind();
+	          gl.texImage2D(args.target, args.level, args.format, args.width, args.height, 0, args.format, args.type, null);
+	        }
+	      };
+	    })(this);
+	    this.setFilter(args.minFilter, args.magFilter);
+	    this.setWrap(args.wrapS, args.wrapT);
+	    if ((args.width !== void 0 && args.height !== void 0) || args.image !== void 0) {
+	      this.setImage({
+	        width: args.width,
+	        height: args.height,
+	        format: args.format,
+	        type: args.type,
+	        image: args.image
+	      });
+	    }
+	  };
+	  this.Texture.Target = {
+	    TEXTURE_2D: gl.TEXTURE_2D,
+	    CUBE_MAP: gl.CUBE_MAP,
+	    CUBE_MAP_POSITIVE_X: gl.TEXTURE_CUBE_MAP_POSITIVE_X,
+	    CUBE_MAP_NEGATIVE_X: gl.TEXTURE_CUBE_MAP_NEGATIVE_X,
+	    CUBE_MAP_POSITIVE_Y: gl.TEYTURE_CUBE_MAP_POSITIVE_Y,
+	    CUBE_MAP_NEGATIVE_Y: gl.TEYTURE_CUBE_MAP_NEGATIVE_Y,
+	    CUBE_MAP_POSITIVE_Z: gl.TEZTURE_CUBE_MAP_POSITIVE_Z,
+	    CUBE_MAP_NEGATIVE_Z: gl.TEZTURE_CUBE_MAP_NEGATIVE_Z
+	  };
+	  this.Texture.Filter = {
+	    NEAREST: gl.NEAREST,
+	    LINEAR: gl.LINEAR,
+	    NEAREST_MIPMAP_NEAREST: gl.NEAREST_MIPMAP_NEAREST,
+	    LINEAR_MIPMAP_NEAREST: gl.LINEAR_MIPMAP_NEAREST,
+	    NEAREST_MIPMAP_LINEAR: gl.NEAREST_MIPMAP_LINEAR,
+	    LINEAR_MIPMAP_LINEAR: gl.LINEAR_MIPMAP_LINEAR
+	  };
+	  this.Texture.Wrap = {
+	    CLAMP_TO_EDGE: gl.CLAMP_TO_EDGE,
+	    MIRRORED_REPEAT: gl.MIRRORED_REPEAT,
+	    REPEAT: gl.REPEAT
+	  };
+	  this.Texture.Format = {
+	    ALPHA: gl.ALPHA,
+	    LUMINANCE: gl.LUMINANCE,
+	    LUMINANCE_ALPHA: gl.LUMINANCE_ALPHA,
+	    RGB: gl.RGB,
+	    RGBA: gl.RGBA
+	  };
+	  this.Texture.Type = {
+	    UNSIGNED_BYTE: gl.UNSIGNED_BYTE,
+	    UNSIGNED_SHORT_5_6_5: gl.UNSIGNED_SHORT_5_6_5,
+	    UNSIGNED_SHORT_4_4_4_4: gl.UNSIGNED_SHORT_4_4_4_4,
+	    UNSIGNED_SHORT_5_5_5_1: gl.UNSIGNED_SHORT_5_5_5_1
+	  };
+	  boundFramebuffer = null;
+	  bindFramebuffer = function(framebuffer) {
+	    if (framebuffer !== boundFramebuffer) {
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer != null ? framebuffer._id : null);
+	      return boundFramebuffer = framebuffer;
+	    }
+	  };
+	  this.Framebuffer = function(args) {
+	    var attachBuffer, glFramebuffer;
+	    processArgs(args, {
+	      colorBuffer: null,
+	      depthBuffer: null,
+	      stencilBuffer: null,
+	      width: gl.canvas.width,
+	      height: gl.canvas.height
+	    });
+	    glFramebuffer = gl.createFramebuffer();
+	    this._id = glFramebuffer;
+	    this.colorBuffer = null;
+	    this.depthBuffer = null;
+	    this.stencilBuffer = null;
+	    attachBuffer = function(attachment, buffer, width, height) {
+	      bindFramebuffer(this);
+	      if (buffer === gla.CREATE_TEXTURE_2D) {
+	        buffer = new gla.Texture({
+	          minFilter: gla.Texture.Filter.NEAREST,
+	          magFilter: gla.Texture.Filter.NEAREST,
+	          wrapS: gla.Texture.Wrap.CLAMP_TO_EDGE,
+	          wrapT: gla.Texture.Wrap.CLAMP_TO_EDGE,
+	          width: width,
+	          height: height
+	        });
+	      } else if (buffer === gla.CREATE_RENDERBUFFER) {
+	        throw new Error('Renderbuffers not yet supported');
+	      }
+	      if (buffer instanceof gla.Texture) {
+	        gl.framebufferTexture2D(gl.FRAMEBUFFER, attachment, gl.TEXTURE_2D, buffer._id, 0);
+	      } else if (buffer instanceof gla.RenderBuffer) {
+	        gl.framebufferRenderbuffer(gl.FRAMEBUFFER, attachment, gl.RENDERBUFFER, buffer._id);
+	      }
+	      return buffer;
+	    };
+	    this.attachColorBuffer = function(colorBuffer, width, height) {
+	      return this.colorBuffer = attachBuffer.call(this, gl.COLOR_ATTACHMENT0, colorBuffer, width, height);
+	    };
+	    this.attachDepthBuffer = function(depthBuffer, width, height) {
+	      return this.depthBuffer = attachBuffer.call(this, gl.DEPTH_ATTACHMENT, depthBuffer, width, height);
+	    };
+	    this.attachStencilBuffer = function(stencilBuffer, width, height) {
+	      return this.stencilBuffer = attachBuffer.call(this, gl.STENCIL_ATTACHMENT, stencilBuffer, width, height);
+	    };
+	    this.checkComplete = function() {
+	      var framebufferStatus, textStatus;
+	      bindFramebuffer(this);
+	      framebufferStatus = gl.checkFramebufferStatus(gl.FRAMEBUFFER);
+	      if (framebufferStatus !== gl.FRAMEBUFFER_COMPLETE) {
+	        textStatus = (function() {
+	          switch (framebufferStatus) {
+	            case gl.FRAMEBUFFER_INCOMPLETE_ATTACHMENT:
+	              return 'INCOMPLETE_ATTACHMENT';
+	            case gl.FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT:
+	              return 'INCOMPLETE_MISSING_ATTACHMENT';
+	            case gl.FRAMEBUFFER_INCOMPLETE_DIMENSIONS:
+	              return 'INCOMPLETE_DIMENSIONS';
+	            case gl.FRAMEBUFFER_UNSUPPORTED:
+	              return 'UNSUPPORTED';
+	            default:
+	              return framebufferStatus;
+	          }
+	        })();
+	        throw new Error("Framebuffer incomplete: " + textStatus);
+	      }
+	    };
+	    if (args.colorBuffer) {
+	      this.attachColorBuffer(args.colorBuffer, args.width, args.height);
+	    }
+	    if (args.depthBuffer) {
+	      this.attachDepthBuffer(args.depthBuffer, args.width, args.height);
+	    }
+	    if (args.stencilBuffer) {
+	      this.attachStencilBuffer(args.stencilBuffer, args.width, args.height);
+	    }
+	  };
+	  this.CREATE_TEXTURE_2D = new Object();
+	  this.CREATE_RENDERBUFFER = new Object();
+	  clearColor = [0, 0, 0, 0];
+	  clearDepth = 1;
+	  clearStencil = 0;
+	  this.clear = function(args) {
+	    var bits, colorChanged, fullColor, i, j;
+	    processArgs(args, {
+	      color: null,
+	      depth: null,
+	      stencil: null,
+	      framebuffer: null
+	    });
+	    bindFramebuffer(args.framebuffer);
+	    bits = 0;
+	    if (args.color !== null) {
+	      bits |= gl.COLOR_BUFFER_BIT;
+	      fullColor = [];
+	      colorChanged = false;
+	      for (i = j = 0; j <= 3; i = ++j) {
+	        if (args.color[i] === void 0) {
+	          fullColor[i] = fullColor[i - 1];
+	        } else {
+	          fullColor[i] = args.color[i];
+	        }
+	        colorChanged = colorChanged || (fullColor[i] !== clearColor[i]);
+	      }
+	      if (colorChanged) {
+	        gl.clearColor(fullColor[0], fullColor[1], fullColor[2], fullColor[3]);
+	        clearColor = fullColor;
+	      }
+	    }
+	    if (args.depth !== null) {
+	      bits |= gl.DEPTH_BUFFER_BIT;
+	      if (args.depth !== clearDepth) {
+	        gl.clearDepth(args.depth);
+	        clearDepth = args.depth;
+	      }
+	    }
+	    if (args.stencil !== null) {
+	      bits |= gl.STENCIL_BUFFER_BIT;
+	      if (args.stencil !== clearStencil) {
+	        gl.clearStencil(args.stencil);
+	        clearStencil = args.stencil;
+	      }
+	    }
+	    return gl.clear(bits);
+	  };
+	  this.draw = function(args) {
+	    var current, currentTextureUnit, framebuffer, key, program, ref, ref1, target, type, value;
+	    processArgs(args, {
+	      program: REQUIRED,
+	      uniforms: {},
+	      attributes: {},
+	      mode: gla.DrawMode.TRIANGLES,
+	      first: 0,
+	      count: REQUIRED,
+	      framebuffer: null,
+	      viewport: {
+	        x: 0,
+	        y: 0,
+	        width: gl.canvas.width,
+	        height: gl.canvas.height
+	      }
+	    });
+	    framebuffer = args.framebuffer;
+	    bindFramebuffer(framebuffer);
+	    if (framebuffer !== null) {
+	      framebuffer.checkComplete();
+	    }
+	    setViewport(args.viewport);
+	    program = args.program;
+	    program.use();
+	    currentTextureUnit = {};
+	    ref = args.uniforms;
+	    for (key in ref) {
+	      if (!hasProp.call(ref, key)) continue;
+	      value = ref[key];
+	      type = program.uniforms[key].type;
+	      switch (type) {
+	        case 'sampler2D':
+	        case 'samplerRect':
+	          target = {
+	            sampler2D: gl.TEXTURE_2D,
+	            samplerCube: gl.TEXTURE_CUBE_MAP
+	          }[type];
+	          current = currentTextureUnit[target] || 0;
+	          textureUnits[current].bind(target, value);
+	          program.uniforms[key].set(current);
+	          currentTextureUnit[target] = current + 1;
+	          break;
+	        default:
+	          program.uniforms[key].set(value);
+	      }
+	    }
+	    ref1 = args.attributes;
+	    for (key in ref1) {
+	      if (!hasProp.call(ref1, key)) continue;
+	      value = ref1[key];
+	      program.attributes[key].set(value);
+	    }
+	    return gl.drawArrays(args.mode, args.first, args.count);
+	  };
+	  this.DrawMode = {
+	    POINTS: gl.POINTS,
+	    LINE_STRIP: gl.LINE_STRIP,
+	    LINE_LOOP: gl.LINE_LOOP,
+	    LINES: gl.LINES,
+	    TRIANGLE_STRIP: gl.TRIANGLE_STRIP,
+	    TRIANGLE_FAN: gl.TRIANGLE_FAN,
+	    TRIANGLES: gl.TRIANGLES
+	  };
 	};
 
 

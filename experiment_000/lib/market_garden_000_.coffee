@@ -8,6 +8,7 @@ c 'React version', React.version
 c 'dispatcher', dispatcher
 
 glyph_000 = require('./components/market_glyph_000_.coffee')()
+glyph_001 = require('./components/market_glyph_001_.coffee')()
 board_000 = require('./components/board_000_.coffee')()
 
 dragoon_store = require('./stores/dragoon_store_000_.coffee')
@@ -66,7 +67,8 @@ market_garden = rr
             div main_div()
         else
             div main_div(),
-                glyph_000 from_root_payload_002()
+                # glyph_000 from_root_payload_002()
+                glyph_001()
 
 React_DOM.render market_garden(), imp_root
 

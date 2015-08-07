@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "gl-matrix": "latest",
+    "react-three": "latest",
     "flux": "latest",
     "react-dom": "^0.14.0-beta1",
     "react":"^0.14.0-beta1",

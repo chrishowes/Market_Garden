@@ -2,6 +2,7 @@
 
 
 
+
 c = -> console.log.apply console, arguments
 React = require("react")
 React_DOM = require("react-dom")
@@ -11,8 +12,12 @@ _ = require('lodash')
 Bluebird = require('bluebird')
 math = require('./math.min.js')
 flux = require('flux')
+require './gladder.coffee'
+
 
 #require('./three.min.js')
+
+c 'glMatrix', glMatrix
 
 c "Three", THREE
 
@@ -25,7 +30,9 @@ EventEmitter = require('events').EventEmitter
 
 c 'EventEmitter', EventEmitter
 
+
 module.exports = ->
+    Gladder: Gladder
     EventEmitter: EventEmitter
     dispatcher: dispatcher
     flux: flux
