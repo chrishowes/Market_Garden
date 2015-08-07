@@ -1,3 +1,5 @@
+# https://github.com/ttencate/gladder
+
 # TODO add docs to all public methods
 
 isString = (x) -> Object.prototype.toString.call(x) == '[object String]'

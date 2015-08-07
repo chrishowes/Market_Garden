@@ -1,0 +1,1284 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/wylie/.nvm/versions/io.js/v3.0.0/bin/iojs',
+1 verbose cli   '/home/wylie/.nvm/versions/io.js/v3.0.0/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@2.13.3
+3 info using node@v3.0.0
+4 verbose readDependencies loading dependencies from /home/wylie/Market_Garden/package.json
+5 warn package.json @ No repository field.
+6 warn package.json @ No license field.
+7 verbose install where, deps [ '/home/wylie/Market_Garden',
+7 verbose install   [ 'gl-matrix',
+7 verbose install     'react-three',
+7 verbose install     'flux',
+7 verbose install     'react-dom',
+7 verbose install     'react',
+7 verbose install     'bluebird',
+7 verbose install     'mathjs',
+7 verbose install     'worker-loader',
+7 verbose install     'redis',
+7 verbose install     'react-hot-loader',
+7 verbose install     'babel-core',
+7 verbose install     'babel-loader',
+7 verbose install     'shortid',
+7 verbose install     'source-map-loader',
+7 verbose install     'immutable',
+7 verbose install     'webpack-dev-middleware',
+7 verbose install     'extract-text-webpack-plugin',
+7 verbose install     'file-loader',
+7 verbose install     'style-loader',
+7 verbose install     'css-loader',
+7 verbose install     'stylus-loader',
+7 verbose install     'webpack-dev-server',
+7 verbose install     'coffee-loader',
+7 verbose install     'webpack',
+7 verbose install     'core-js',
+7 verbose install     'lodash' ] ]
+8 verbose install where, peers [ '/home/wylie/Market_Garden', [] ]
+9 verbose installManyTop reading for lifecycle /home/wylie/Market_Garden/package.json
+10 info preinstall @
+11 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/babel-core/package.json
+12 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/babel-loader/package.json
+13 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/bluebird/package.json
+14 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/coffee-loader/package.json
+15 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/coffee-script/package.json
+16 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/core-js/package.json
+17 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/css-loader/package.json
+18 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/extract-text-webpack-plugin/package.json
+19 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/file-loader/package.json
+20 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/flux/package.json
+21 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/gl-matrix/package.json
+22 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/immutable/package.json
+23 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/lodash/package.json
+24 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/mathjs/package.json
+25 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/node-libs-browser/package.json
+26 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/react/package.json
+27 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/react-dom/package.json
+28 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/react-hot-loader/package.json
+29 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/react-three/package.json
+30 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/redis/package.json
+31 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/shortid/package.json
+32 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/source-map-loader/package.json
+33 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/style-loader/package.json
+34 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/stylus-loader/package.json
+35 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/three/package.json
+36 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/webpack/package.json
+37 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/webpack-dev-middleware/package.json
+38 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/webpack-dev-server/package.json
+39 verbose installManyTop reading scoped package data from /home/wylie/Market_Garden/node_modules/worker-loader/package.json
+40 info package.json babel-core@5.8.21 No README data
+41 info package.json coffee-loader@0.7.2 No license field.
+42 info package.json redis@0.12.1 No license field.
+43 info package.json source-map-loader@0.1.5 No license field.
+44 info package.json three@0.70.1 license should be a valid SPDX license expression
+45 info package.json webpack-dev-middleware@1.2.0 No license field.
+46 info package.json worker-loader@0.6.0 No repository field.
+47 info package.json worker-loader@0.6.0 No license field.
+48 info package.json flux@2.0.3 license should be a valid SPDX license expression
+49 verbose readDependencies loading dependencies from /home/wylie/Market_Garden/package.json
+50 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/babel-core/package.json
+51 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/babel-loader/package.json
+52 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/bluebird/package.json
+53 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/coffee-loader/package.json
+54 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/coffee-script/package.json
+55 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/core-js/package.json
+56 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/css-loader/package.json
+57 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/extract-text-webpack-plugin/package.json
+58 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/file-loader/package.json
+59 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/flux/package.json
+60 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/gl-matrix/package.json
+61 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/immutable/package.json
+62 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/lodash/package.json
+63 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/mathjs/package.json
+64 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/node-libs-browser/package.json
+65 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/react/package.json
+66 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/react-dom/package.json
+67 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/react-hot-loader/package.json
+68 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/react-three/package.json
+69 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/redis/package.json
+70 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/shortid/package.json
+71 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/source-map-loader/package.json
+72 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/style-loader/package.json
+73 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/stylus-loader/package.json
+74 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/three/package.json
+75 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/webpack/package.json
+76 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/webpack-dev-middleware/package.json
+77 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/webpack-dev-server/package.json
+78 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/worker-loader/package.json
+79 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/.bin/cake/package.json
+80 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/.bin/coffee/package.json
+81 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/.bin/mathjs/package.json
+82 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/.bin/webpack/package.json
+83 verbose targetResolver reading package data from /home/wylie/Market_Garden/node_modules/.bin/webpack-dev-server/package.json
+84 verbose already installed skipping react-dom@^0.14.0-beta1 /home/wylie/Market_Garden
+85 verbose already installed skipping react@^0.14.0-beta1 /home/wylie/Market_Garden
+86 silly cache add args [ 'bluebird@latest', null ]
+87 verbose cache add spec bluebird@latest
+88 silly cache add args [ 'mathjs@latest', null ]
+89 verbose cache add spec mathjs@latest
+90 silly cache add args [ 'worker-loader@latest', null ]
+91 verbose cache add spec worker-loader@latest
+92 silly cache add args [ 'redis@latest', null ]
+93 verbose cache add spec redis@latest
+94 silly cache add args [ 'react-hot-loader@latest', null ]
+95 verbose cache add spec react-hot-loader@latest
+96 silly cache add args [ 'babel-core@latest', null ]
+97 verbose cache add spec babel-core@latest
+98 silly cache add args [ 'babel-loader@latest', null ]
+99 verbose cache add spec babel-loader@latest
+100 silly cache add args [ 'shortid@latest', null ]
+101 verbose cache add spec shortid@latest
+102 silly cache add args [ 'source-map-loader@latest', null ]
+103 verbose cache add spec source-map-loader@latest
+104 silly cache add args [ 'immutable@latest', null ]
+105 verbose cache add spec immutable@latest
+106 silly cache add args [ 'webpack-dev-middleware@latest', null ]
+107 verbose cache add spec webpack-dev-middleware@latest
+108 silly cache add args [ 'extract-text-webpack-plugin@latest', null ]
+109 verbose cache add spec extract-text-webpack-plugin@latest
+110 silly cache add args [ 'file-loader@latest', null ]
+111 verbose cache add spec file-loader@latest
+112 silly cache add args [ 'style-loader@latest', null ]
+113 verbose cache add spec style-loader@latest
+114 silly cache add args [ 'css-loader@latest', null ]
+115 verbose cache add spec css-loader@latest
+116 silly cache add args [ 'stylus-loader@latest', null ]
+117 verbose cache add spec stylus-loader@latest
+118 silly cache add args [ 'webpack-dev-server@latest', null ]
+119 verbose cache add spec webpack-dev-server@latest
+120 silly cache add args [ 'coffee-loader@latest', null ]
+121 verbose cache add spec coffee-loader@latest
+122 silly cache add args [ 'webpack@latest', null ]
+123 verbose cache add spec webpack@latest
+124 silly cache add args [ 'core-js@latest', null ]
+125 verbose cache add spec core-js@latest
+126 silly cache add args [ 'lodash@latest', null ]
+127 verbose cache add spec lodash@latest
+128 silly cache add args [ 'gl-matrix@latest', null ]
+129 verbose cache add spec gl-matrix@latest
+130 silly cache add args [ 'react-three@latest', null ]
+131 verbose cache add spec react-three@latest
+132 silly cache add args [ 'flux@latest', null ]
+133 verbose cache add spec flux@latest
+134 silly cache add parsed spec { raw: 'bluebird@latest',
+134 silly cache add   scope: null,
+134 silly cache add   name: 'bluebird',
+134 silly cache add   rawSpec: 'latest',
+134 silly cache add   spec: 'latest',
+134 silly cache add   type: 'tag' }
+135 silly addNamed bluebird@latest
+136 verbose addNamed "latest" is being treated as a dist-tag for bluebird
+137 info addNameTag [ 'bluebird', 'latest' ]
+138 silly mapToRegistry name bluebird
+139 silly mapToRegistry using default registry
+140 silly mapToRegistry registry https://registry.npmjs.org/
+141 silly mapToRegistry uri https://registry.npmjs.org/bluebird
+142 verbose addNameTag registry:https://registry.npmjs.org/bluebird not in flight; fetching
+143 silly cache add parsed spec { raw: 'mathjs@latest',
+143 silly cache add   scope: null,
+143 silly cache add   name: 'mathjs',
+143 silly cache add   rawSpec: 'latest',
+143 silly cache add   spec: 'latest',
+143 silly cache add   type: 'tag' }
+144 silly addNamed mathjs@latest
+145 verbose addNamed "latest" is being treated as a dist-tag for mathjs
+146 info addNameTag [ 'mathjs', 'latest' ]
+147 silly mapToRegistry name mathjs
+148 silly mapToRegistry using default registry
+149 silly mapToRegistry registry https://registry.npmjs.org/
+150 silly mapToRegistry uri https://registry.npmjs.org/mathjs
+151 verbose addNameTag registry:https://registry.npmjs.org/mathjs not in flight; fetching
+152 silly cache add parsed spec { raw: 'worker-loader@latest',
+152 silly cache add   scope: null,
+152 silly cache add   name: 'worker-loader',
+152 silly cache add   rawSpec: 'latest',
+152 silly cache add   spec: 'latest',
+152 silly cache add   type: 'tag' }
+153 silly addNamed worker-loader@latest
+154 verbose addNamed "latest" is being treated as a dist-tag for worker-loader
+155 info addNameTag [ 'worker-loader', 'latest' ]
+156 silly mapToRegistry name worker-loader
+157 silly mapToRegistry using default registry
+158 silly mapToRegistry registry https://registry.npmjs.org/
+159 silly mapToRegistry uri https://registry.npmjs.org/worker-loader
+160 verbose addNameTag registry:https://registry.npmjs.org/worker-loader not in flight; fetching
+161 silly cache add parsed spec { raw: 'redis@latest',
+161 silly cache add   scope: null,
+161 silly cache add   name: 'redis',
+161 silly cache add   rawSpec: 'latest',
+161 silly cache add   spec: 'latest',
+161 silly cache add   type: 'tag' }
+162 silly addNamed redis@latest
+163 verbose addNamed "latest" is being treated as a dist-tag for redis
+164 info addNameTag [ 'redis', 'latest' ]
+165 silly mapToRegistry name redis
+166 silly mapToRegistry using default registry
+167 silly mapToRegistry registry https://registry.npmjs.org/
+168 silly mapToRegistry uri https://registry.npmjs.org/redis
+169 verbose addNameTag registry:https://registry.npmjs.org/redis not in flight; fetching
+170 silly cache add parsed spec { raw: 'react-hot-loader@latest',
+170 silly cache add   scope: null,
+170 silly cache add   name: 'react-hot-loader',
+170 silly cache add   rawSpec: 'latest',
+170 silly cache add   spec: 'latest',
+170 silly cache add   type: 'tag' }
+171 silly addNamed react-hot-loader@latest
+172 verbose addNamed "latest" is being treated as a dist-tag for react-hot-loader
+173 info addNameTag [ 'react-hot-loader', 'latest' ]
+174 silly mapToRegistry name react-hot-loader
+175 silly mapToRegistry using default registry
+176 silly mapToRegistry registry https://registry.npmjs.org/
+177 silly mapToRegistry uri https://registry.npmjs.org/react-hot-loader
+178 verbose addNameTag registry:https://registry.npmjs.org/react-hot-loader not in flight; fetching
+179 silly cache add parsed spec { raw: 'babel-core@latest',
+179 silly cache add   scope: null,
+179 silly cache add   name: 'babel-core',
+179 silly cache add   rawSpec: 'latest',
+179 silly cache add   spec: 'latest',
+179 silly cache add   type: 'tag' }
+180 silly addNamed babel-core@latest
+181 verbose addNamed "latest" is being treated as a dist-tag for babel-core
+182 info addNameTag [ 'babel-core', 'latest' ]
+183 silly mapToRegistry name babel-core
+184 silly mapToRegistry using default registry
+185 silly mapToRegistry registry https://registry.npmjs.org/
+186 silly mapToRegistry uri https://registry.npmjs.org/babel-core
+187 verbose addNameTag registry:https://registry.npmjs.org/babel-core not in flight; fetching
+188 silly cache add parsed spec { raw: 'babel-loader@latest',
+188 silly cache add   scope: null,
+188 silly cache add   name: 'babel-loader',
+188 silly cache add   rawSpec: 'latest',
+188 silly cache add   spec: 'latest',
+188 silly cache add   type: 'tag' }
+189 silly addNamed babel-loader@latest
+190 verbose addNamed "latest" is being treated as a dist-tag for babel-loader
+191 info addNameTag [ 'babel-loader', 'latest' ]
+192 silly mapToRegistry name babel-loader
+193 silly mapToRegistry using default registry
+194 silly mapToRegistry registry https://registry.npmjs.org/
+195 silly mapToRegistry uri https://registry.npmjs.org/babel-loader
+196 verbose addNameTag registry:https://registry.npmjs.org/babel-loader not in flight; fetching
+197 silly cache add parsed spec { raw: 'shortid@latest',
+197 silly cache add   scope: null,
+197 silly cache add   name: 'shortid',
+197 silly cache add   rawSpec: 'latest',
+197 silly cache add   spec: 'latest',
+197 silly cache add   type: 'tag' }
+198 silly addNamed shortid@latest
+199 verbose addNamed "latest" is being treated as a dist-tag for shortid
+200 info addNameTag [ 'shortid', 'latest' ]
+201 silly mapToRegistry name shortid
+202 silly mapToRegistry using default registry
+203 silly mapToRegistry registry https://registry.npmjs.org/
+204 silly mapToRegistry uri https://registry.npmjs.org/shortid
+205 verbose addNameTag registry:https://registry.npmjs.org/shortid not in flight; fetching
+206 silly cache add parsed spec { raw: 'source-map-loader@latest',
+206 silly cache add   scope: null,
+206 silly cache add   name: 'source-map-loader',
+206 silly cache add   rawSpec: 'latest',
+206 silly cache add   spec: 'latest',
+206 silly cache add   type: 'tag' }
+207 silly addNamed source-map-loader@latest
+208 verbose addNamed "latest" is being treated as a dist-tag for source-map-loader
+209 info addNameTag [ 'source-map-loader', 'latest' ]
+210 silly mapToRegistry name source-map-loader
+211 silly mapToRegistry using default registry
+212 silly mapToRegistry registry https://registry.npmjs.org/
+213 silly mapToRegistry uri https://registry.npmjs.org/source-map-loader
+214 verbose addNameTag registry:https://registry.npmjs.org/source-map-loader not in flight; fetching
+215 silly cache add parsed spec { raw: 'immutable@latest',
+215 silly cache add   scope: null,
+215 silly cache add   name: 'immutable',
+215 silly cache add   rawSpec: 'latest',
+215 silly cache add   spec: 'latest',
+215 silly cache add   type: 'tag' }
+216 silly addNamed immutable@latest
+217 verbose addNamed "latest" is being treated as a dist-tag for immutable
+218 info addNameTag [ 'immutable', 'latest' ]
+219 silly mapToRegistry name immutable
+220 silly mapToRegistry using default registry
+221 silly mapToRegistry registry https://registry.npmjs.org/
+222 silly mapToRegistry uri https://registry.npmjs.org/immutable
+223 verbose addNameTag registry:https://registry.npmjs.org/immutable not in flight; fetching
+224 silly cache add parsed spec { raw: 'webpack-dev-middleware@latest',
+224 silly cache add   scope: null,
+224 silly cache add   name: 'webpack-dev-middleware',
+224 silly cache add   rawSpec: 'latest',
+224 silly cache add   spec: 'latest',
+224 silly cache add   type: 'tag' }
+225 silly addNamed webpack-dev-middleware@latest
+226 verbose addNamed "latest" is being treated as a dist-tag for webpack-dev-middleware
+227 info addNameTag [ 'webpack-dev-middleware', 'latest' ]
+228 silly mapToRegistry name webpack-dev-middleware
+229 silly mapToRegistry using default registry
+230 silly mapToRegistry registry https://registry.npmjs.org/
+231 silly mapToRegistry uri https://registry.npmjs.org/webpack-dev-middleware
+232 verbose addNameTag registry:https://registry.npmjs.org/webpack-dev-middleware not in flight; fetching
+233 silly cache add parsed spec { raw: 'extract-text-webpack-plugin@latest',
+233 silly cache add   scope: null,
+233 silly cache add   name: 'extract-text-webpack-plugin',
+233 silly cache add   rawSpec: 'latest',
+233 silly cache add   spec: 'latest',
+233 silly cache add   type: 'tag' }
+234 silly addNamed extract-text-webpack-plugin@latest
+235 verbose addNamed "latest" is being treated as a dist-tag for extract-text-webpack-plugin
+236 info addNameTag [ 'extract-text-webpack-plugin', 'latest' ]
+237 silly mapToRegistry name extract-text-webpack-plugin
+238 silly mapToRegistry using default registry
+239 silly mapToRegistry registry https://registry.npmjs.org/
+240 silly mapToRegistry uri https://registry.npmjs.org/extract-text-webpack-plugin
+241 verbose addNameTag registry:https://registry.npmjs.org/extract-text-webpack-plugin not in flight; fetching
+242 silly cache add parsed spec { raw: 'file-loader@latest',
+242 silly cache add   scope: null,
+242 silly cache add   name: 'file-loader',
+242 silly cache add   rawSpec: 'latest',
+242 silly cache add   spec: 'latest',
+242 silly cache add   type: 'tag' }
+243 silly addNamed file-loader@latest
+244 verbose addNamed "latest" is being treated as a dist-tag for file-loader
+245 info addNameTag [ 'file-loader', 'latest' ]
+246 silly mapToRegistry name file-loader
+247 silly mapToRegistry using default registry
+248 silly mapToRegistry registry https://registry.npmjs.org/
+249 silly mapToRegistry uri https://registry.npmjs.org/file-loader
+250 verbose addNameTag registry:https://registry.npmjs.org/file-loader not in flight; fetching
+251 silly cache add parsed spec { raw: 'style-loader@latest',
+251 silly cache add   scope: null,
+251 silly cache add   name: 'style-loader',
+251 silly cache add   rawSpec: 'latest',
+251 silly cache add   spec: 'latest',
+251 silly cache add   type: 'tag' }
+252 silly addNamed style-loader@latest
+253 verbose addNamed "latest" is being treated as a dist-tag for style-loader
+254 info addNameTag [ 'style-loader', 'latest' ]
+255 silly mapToRegistry name style-loader
+256 silly mapToRegistry using default registry
+257 silly mapToRegistry registry https://registry.npmjs.org/
+258 silly mapToRegistry uri https://registry.npmjs.org/style-loader
+259 verbose addNameTag registry:https://registry.npmjs.org/style-loader not in flight; fetching
+260 silly cache add parsed spec { raw: 'css-loader@latest',
+260 silly cache add   scope: null,
+260 silly cache add   name: 'css-loader',
+260 silly cache add   rawSpec: 'latest',
+260 silly cache add   spec: 'latest',
+260 silly cache add   type: 'tag' }
+261 silly addNamed css-loader@latest
+262 verbose addNamed "latest" is being treated as a dist-tag for css-loader
+263 info addNameTag [ 'css-loader', 'latest' ]
+264 silly mapToRegistry name css-loader
+265 silly mapToRegistry using default registry
+266 silly mapToRegistry registry https://registry.npmjs.org/
+267 silly mapToRegistry uri https://registry.npmjs.org/css-loader
+268 verbose addNameTag registry:https://registry.npmjs.org/css-loader not in flight; fetching
+269 silly cache add parsed spec { raw: 'stylus-loader@latest',
+269 silly cache add   scope: null,
+269 silly cache add   name: 'stylus-loader',
+269 silly cache add   rawSpec: 'latest',
+269 silly cache add   spec: 'latest',
+269 silly cache add   type: 'tag' }
+270 silly addNamed stylus-loader@latest
+271 verbose addNamed "latest" is being treated as a dist-tag for stylus-loader
+272 info addNameTag [ 'stylus-loader', 'latest' ]
+273 silly mapToRegistry name stylus-loader
+274 silly mapToRegistry using default registry
+275 silly mapToRegistry registry https://registry.npmjs.org/
+276 silly mapToRegistry uri https://registry.npmjs.org/stylus-loader
+277 verbose addNameTag registry:https://registry.npmjs.org/stylus-loader not in flight; fetching
+278 silly cache add parsed spec { raw: 'webpack-dev-server@latest',
+278 silly cache add   scope: null,
+278 silly cache add   name: 'webpack-dev-server',
+278 silly cache add   rawSpec: 'latest',
+278 silly cache add   spec: 'latest',
+278 silly cache add   type: 'tag' }
+279 silly addNamed webpack-dev-server@latest
+280 verbose addNamed "latest" is being treated as a dist-tag for webpack-dev-server
+281 info addNameTag [ 'webpack-dev-server', 'latest' ]
+282 silly mapToRegistry name webpack-dev-server
+283 silly mapToRegistry using default registry
+284 silly mapToRegistry registry https://registry.npmjs.org/
+285 silly mapToRegistry uri https://registry.npmjs.org/webpack-dev-server
+286 verbose addNameTag registry:https://registry.npmjs.org/webpack-dev-server not in flight; fetching
+287 silly cache add parsed spec { raw: 'coffee-loader@latest',
+287 silly cache add   scope: null,
+287 silly cache add   name: 'coffee-loader',
+287 silly cache add   rawSpec: 'latest',
+287 silly cache add   spec: 'latest',
+287 silly cache add   type: 'tag' }
+288 silly addNamed coffee-loader@latest
+289 verbose addNamed "latest" is being treated as a dist-tag for coffee-loader
+290 info addNameTag [ 'coffee-loader', 'latest' ]
+291 silly mapToRegistry name coffee-loader
+292 silly mapToRegistry using default registry
+293 silly mapToRegistry registry https://registry.npmjs.org/
+294 silly mapToRegistry uri https://registry.npmjs.org/coffee-loader
+295 verbose addNameTag registry:https://registry.npmjs.org/coffee-loader not in flight; fetching
+296 silly cache add parsed spec { raw: 'webpack@latest',
+296 silly cache add   scope: null,
+296 silly cache add   name: 'webpack',
+296 silly cache add   rawSpec: 'latest',
+296 silly cache add   spec: 'latest',
+296 silly cache add   type: 'tag' }
+297 silly addNamed webpack@latest
+298 verbose addNamed "latest" is being treated as a dist-tag for webpack
+299 info addNameTag [ 'webpack', 'latest' ]
+300 silly mapToRegistry name webpack
+301 silly mapToRegistry using default registry
+302 silly mapToRegistry registry https://registry.npmjs.org/
+303 silly mapToRegistry uri https://registry.npmjs.org/webpack
+304 verbose addNameTag registry:https://registry.npmjs.org/webpack not in flight; fetching
+305 silly cache add parsed spec { raw: 'core-js@latest',
+305 silly cache add   scope: null,
+305 silly cache add   name: 'core-js',
+305 silly cache add   rawSpec: 'latest',
+305 silly cache add   spec: 'latest',
+305 silly cache add   type: 'tag' }
+306 silly addNamed core-js@latest
+307 verbose addNamed "latest" is being treated as a dist-tag for core-js
+308 info addNameTag [ 'core-js', 'latest' ]
+309 silly mapToRegistry name core-js
+310 silly mapToRegistry using default registry
+311 silly mapToRegistry registry https://registry.npmjs.org/
+312 silly mapToRegistry uri https://registry.npmjs.org/core-js
+313 verbose addNameTag registry:https://registry.npmjs.org/core-js not in flight; fetching
+314 silly cache add parsed spec { raw: 'lodash@latest',
+314 silly cache add   scope: null,
+314 silly cache add   name: 'lodash',
+314 silly cache add   rawSpec: 'latest',
+314 silly cache add   spec: 'latest',
+314 silly cache add   type: 'tag' }
+315 silly addNamed lodash@latest
+316 verbose addNamed "latest" is being treated as a dist-tag for lodash
+317 info addNameTag [ 'lodash', 'latest' ]
+318 silly mapToRegistry name lodash
+319 silly mapToRegistry using default registry
+320 silly mapToRegistry registry https://registry.npmjs.org/
+321 silly mapToRegistry uri https://registry.npmjs.org/lodash
+322 verbose addNameTag registry:https://registry.npmjs.org/lodash not in flight; fetching
+323 silly cache add parsed spec { raw: 'gl-matrix@latest',
+323 silly cache add   scope: null,
+323 silly cache add   name: 'gl-matrix',
+323 silly cache add   rawSpec: 'latest',
+323 silly cache add   spec: 'latest',
+323 silly cache add   type: 'tag' }
+324 silly addNamed gl-matrix@latest
+325 verbose addNamed "latest" is being treated as a dist-tag for gl-matrix
+326 info addNameTag [ 'gl-matrix', 'latest' ]
+327 silly mapToRegistry name gl-matrix
+328 silly mapToRegistry using default registry
+329 silly mapToRegistry registry https://registry.npmjs.org/
+330 silly mapToRegistry uri https://registry.npmjs.org/gl-matrix
+331 verbose addNameTag registry:https://registry.npmjs.org/gl-matrix not in flight; fetching
+332 silly cache add parsed spec { raw: 'react-three@latest',
+332 silly cache add   scope: null,
+332 silly cache add   name: 'react-three',
+332 silly cache add   rawSpec: 'latest',
+332 silly cache add   spec: 'latest',
+332 silly cache add   type: 'tag' }
+333 silly addNamed react-three@latest
+334 verbose addNamed "latest" is being treated as a dist-tag for react-three
+335 info addNameTag [ 'react-three', 'latest' ]
+336 silly mapToRegistry name react-three
+337 silly mapToRegistry using default registry
+338 silly mapToRegistry registry https://registry.npmjs.org/
+339 silly mapToRegistry uri https://registry.npmjs.org/react-three
+340 verbose addNameTag registry:https://registry.npmjs.org/react-three not in flight; fetching
+341 silly cache add parsed spec { raw: 'flux@latest',
+341 silly cache add   scope: null,
+341 silly cache add   name: 'flux',
+341 silly cache add   rawSpec: 'latest',
+341 silly cache add   spec: 'latest',
+341 silly cache add   type: 'tag' }
+342 silly addNamed flux@latest
+343 verbose addNamed "latest" is being treated as a dist-tag for flux
+344 info addNameTag [ 'flux', 'latest' ]
+345 silly mapToRegistry name flux
+346 silly mapToRegistry using default registry
+347 silly mapToRegistry registry https://registry.npmjs.org/
+348 silly mapToRegistry uri https://registry.npmjs.org/flux
+349 verbose addNameTag registry:https://registry.npmjs.org/flux not in flight; fetching
+350 verbose request uri https://registry.npmjs.org/bluebird
+351 verbose request no auth needed
+352 info attempt registry request try #1 at 20:29:33
+353 verbose request id 73a70d976c896e1b
+354 verbose etag "MBSFYAQ0RI07XX0TT3PPQYDL"
+355 http request GET https://registry.npmjs.org/bluebird
+356 verbose request uri https://registry.npmjs.org/mathjs
+357 verbose request no auth needed
+358 info attempt registry request try #1 at 20:29:33
+359 verbose etag "5ZA8A57YT6TJE6U54JPPPH8WH"
+360 http request GET https://registry.npmjs.org/mathjs
+361 verbose request uri https://registry.npmjs.org/worker-loader
+362 verbose request no auth needed
+363 info attempt registry request try #1 at 20:29:33
+364 verbose etag "EXZZPUEF8R3SEPDCD3QM6XDPB"
+365 http request GET https://registry.npmjs.org/worker-loader
+366 verbose request uri https://registry.npmjs.org/redis
+367 verbose request no auth needed
+368 info attempt registry request try #1 at 20:29:33
+369 verbose etag "DYKVEO42STUEIFV9KV58OJEDB"
+370 http request GET https://registry.npmjs.org/redis
+371 verbose request uri https://registry.npmjs.org/react-hot-loader
+372 verbose request no auth needed
+373 info attempt registry request try #1 at 20:29:33
+374 verbose etag "33VC4LFNU2HEF58TI7HWC2TH5"
+375 http request GET https://registry.npmjs.org/react-hot-loader
+376 verbose request uri https://registry.npmjs.org/babel-core
+377 verbose request no auth needed
+378 info attempt registry request try #1 at 20:29:33
+379 verbose etag "B3O90RWDEKKGVL1Q15AJGR6EU"
+380 http request GET https://registry.npmjs.org/babel-core
+381 verbose request uri https://registry.npmjs.org/babel-loader
+382 verbose request no auth needed
+383 info attempt registry request try #1 at 20:29:33
+384 verbose etag "B8WVCZNJNBUJMC7PV42Z7YJFQ"
+385 http request GET https://registry.npmjs.org/babel-loader
+386 verbose request uri https://registry.npmjs.org/shortid
+387 verbose request no auth needed
+388 info attempt registry request try #1 at 20:29:33
+389 verbose etag "6RUISHV35WR9PV0209AAUXY7L"
+390 http request GET https://registry.npmjs.org/shortid
+391 verbose request uri https://registry.npmjs.org/source-map-loader
+392 verbose request no auth needed
+393 info attempt registry request try #1 at 20:29:33
+394 verbose etag "6UV64URET0H8RW8TEWT2LPMH"
+395 http request GET https://registry.npmjs.org/source-map-loader
+396 verbose request uri https://registry.npmjs.org/immutable
+397 verbose request no auth needed
+398 info attempt registry request try #1 at 20:29:33
+399 verbose etag "CVQUYHKR5RTU0V42PQRT2MUJN"
+400 http request GET https://registry.npmjs.org/immutable
+401 verbose request uri https://registry.npmjs.org/webpack-dev-middleware
+402 verbose request no auth needed
+403 info attempt registry request try #1 at 20:29:33
+404 verbose etag "EIP3BZ6K9UM6CYBYOLVKCFWNM"
+405 http request GET https://registry.npmjs.org/webpack-dev-middleware
+406 verbose request uri https://registry.npmjs.org/extract-text-webpack-plugin
+407 verbose request no auth needed
+408 info attempt registry request try #1 at 20:29:33
+409 verbose etag "7CYCMU1KZNXCRNFHUZCTLON85"
+410 http request GET https://registry.npmjs.org/extract-text-webpack-plugin
+411 verbose request uri https://registry.npmjs.org/file-loader
+412 verbose request no auth needed
+413 info attempt registry request try #1 at 20:29:33
+414 verbose etag "110ILWAIO72PBGBJVW5QH86D2"
+415 http request GET https://registry.npmjs.org/file-loader
+416 verbose request uri https://registry.npmjs.org/style-loader
+417 verbose request no auth needed
+418 info attempt registry request try #1 at 20:29:33
+419 verbose etag "D9HT6K1WTMXOC1WBAC3JWDJXT"
+420 http request GET https://registry.npmjs.org/style-loader
+421 verbose request uri https://registry.npmjs.org/css-loader
+422 verbose request no auth needed
+423 info attempt registry request try #1 at 20:29:33
+424 verbose etag "HVLB9E0XOR4KS1TFOWSBTQJP"
+425 http request GET https://registry.npmjs.org/css-loader
+426 verbose request uri https://registry.npmjs.org/stylus-loader
+427 verbose request no auth needed
+428 info attempt registry request try #1 at 20:29:33
+429 verbose etag "BXMSJIO9Y0ROQXZH0FFSLTLC7"
+430 http request GET https://registry.npmjs.org/stylus-loader
+431 verbose request uri https://registry.npmjs.org/coffee-loader
+432 verbose request no auth needed
+433 info attempt registry request try #1 at 20:29:33
+434 verbose etag "DVRD8N5UJQB6M6AND3FYWQ3LS"
+435 http request GET https://registry.npmjs.org/coffee-loader
+436 verbose request uri https://registry.npmjs.org/webpack-dev-server
+437 verbose request no auth needed
+438 info attempt registry request try #1 at 20:29:33
+439 verbose etag "6P7JVDZUG0TUYTA4N93EZWD0Y"
+440 http request GET https://registry.npmjs.org/webpack-dev-server
+441 verbose request uri https://registry.npmjs.org/webpack
+442 verbose request no auth needed
+443 info attempt registry request try #1 at 20:29:34
+444 verbose etag "AGU8YK4Z6G4WNLZDQEFUVOLPU"
+445 http request GET https://registry.npmjs.org/webpack
+446 verbose request uri https://registry.npmjs.org/core-js
+447 verbose request no auth needed
+448 info attempt registry request try #1 at 20:29:34
+449 verbose etag "AHW626S2HPGLLTUU4MCB9SO15"
+450 http request GET https://registry.npmjs.org/core-js
+451 verbose request uri https://registry.npmjs.org/lodash
+452 verbose request no auth needed
+453 info attempt registry request try #1 at 20:29:34
+454 verbose etag "CZVZVZ42PMXWOXV44M54N3XU9"
+455 http request GET https://registry.npmjs.org/lodash
+456 verbose request uri https://registry.npmjs.org/gl-matrix
+457 verbose request no auth needed
+458 info attempt registry request try #1 at 20:29:34
+459 verbose etag "CZ9JQR4MT4OZ77Y7KI8T3NJ95"
+460 http request GET https://registry.npmjs.org/gl-matrix
+461 verbose request uri https://registry.npmjs.org/react-three
+462 verbose request no auth needed
+463 info attempt registry request try #1 at 20:29:34
+464 verbose etag "1G6788CCQHJI1GB9YUE4WS889"
+465 http request GET https://registry.npmjs.org/react-three
+466 verbose request uri https://registry.npmjs.org/flux
+467 verbose request no auth needed
+468 info attempt registry request try #1 at 20:29:34
+469 verbose etag "6LWLCM49D1VF4SACEG6H9X9RQ"
+470 http request GET https://registry.npmjs.org/flux
+471 http 304 https://registry.npmjs.org/bluebird
+472 silly get cb [ 304,
+472 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+472 silly get     via: '1.1 varnish',
+472 silly get     'cache-control': 'max-age=60',
+472 silly get     etag: '"MBSFYAQ0RI07XX0TT3PPQYDL"',
+472 silly get     age: '30',
+472 silly get     connection: 'keep-alive',
+472 silly get     'x-served-by': 'cache-fra1234-FRA',
+472 silly get     'x-cache': 'HIT',
+472 silly get     'x-cache-hits': '3',
+472 silly get     'x-timer': 'S1438968574.735933,VS0,VE0',
+472 silly get     vary: 'Accept' } ]
+473 verbose etag https://registry.npmjs.org/bluebird from cache
+474 verbose get saving bluebird to /home/wylie/.npm/registry.npmjs.org/bluebird/.cache.json
+475 http 304 https://registry.npmjs.org/immutable
+476 silly get cb [ 304,
+476 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+476 silly get     via: '1.1 varnish',
+476 silly get     'cache-control': 'max-age=60',
+476 silly get     etag: '"CVQUYHKR5RTU0V42PQRT2MUJN"',
+476 silly get     age: '39',
+476 silly get     connection: 'keep-alive',
+476 silly get     'x-served-by': 'cache-fra1229-FRA',
+476 silly get     'x-cache': 'HIT',
+476 silly get     'x-cache-hits': '1',
+476 silly get     'x-timer': 'S1438968574.732452,VS0,VE0',
+476 silly get     vary: 'Accept' } ]
+477 verbose etag https://registry.npmjs.org/immutable from cache
+478 verbose get saving immutable to /home/wylie/.npm/registry.npmjs.org/immutable/.cache.json
+479 http 304 https://registry.npmjs.org/webpack-dev-middleware
+480 silly get cb [ 304,
+480 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+480 silly get     via: '1.1 varnish',
+480 silly get     'cache-control': 'max-age=60',
+480 silly get     etag: '"EIP3BZ6K9UM6CYBYOLVKCFWNM"',
+480 silly get     age: '46',
+480 silly get     connection: 'keep-alive',
+480 silly get     'x-served-by': 'cache-fra1227-FRA',
+480 silly get     'x-cache': 'HIT',
+480 silly get     'x-cache-hits': '1',
+480 silly get     'x-timer': 'S1438968574.737820,VS0,VE0',
+480 silly get     vary: 'Accept' } ]
+481 verbose etag https://registry.npmjs.org/webpack-dev-middleware from cache
+482 verbose get saving webpack-dev-middleware to /home/wylie/.npm/registry.npmjs.org/webpack-dev-middleware/.cache.json
+483 http 304 https://registry.npmjs.org/redis
+484 silly get cb [ 304,
+484 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+484 silly get     via: '1.1 varnish',
+484 silly get     'cache-control': 'max-age=60',
+484 silly get     etag: '"DYKVEO42STUEIFV9KV58OJEDB"',
+484 silly get     age: '13',
+484 silly get     connection: 'keep-alive',
+484 silly get     'x-served-by': 'cache-fra1239-FRA',
+484 silly get     'x-cache': 'HIT',
+484 silly get     'x-cache-hits': '1',
+484 silly get     'x-timer': 'S1438968574.742558,VS0,VE1',
+484 silly get     vary: 'Accept' } ]
+485 verbose etag https://registry.npmjs.org/redis from cache
+486 verbose get saving redis to /home/wylie/.npm/registry.npmjs.org/redis/.cache.json
+487 http 304 https://registry.npmjs.org/react-hot-loader
+488 silly get cb [ 304,
+488 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+488 silly get     via: '1.1 varnish',
+488 silly get     'cache-control': 'max-age=60',
+488 silly get     etag: '"33VC4LFNU2HEF58TI7HWC2TH5"',
+488 silly get     age: '34',
+488 silly get     connection: 'keep-alive',
+488 silly get     'x-served-by': 'cache-fra1238-FRA',
+488 silly get     'x-cache': 'HIT',
+488 silly get     'x-cache-hits': '2',
+488 silly get     'x-timer': 'S1438968574.750708,VS0,VE0',
+488 silly get     vary: 'Accept' } ]
+489 verbose etag https://registry.npmjs.org/react-hot-loader from cache
+490 verbose get saving react-hot-loader to /home/wylie/.npm/registry.npmjs.org/react-hot-loader/.cache.json
+491 http 304 https://registry.npmjs.org/style-loader
+492 silly get cb [ 304,
+492 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+492 silly get     via: '1.1 varnish',
+492 silly get     'cache-control': 'max-age=60',
+492 silly get     etag: '"D9HT6K1WTMXOC1WBAC3JWDJXT"',
+492 silly get     age: '52',
+492 silly get     connection: 'keep-alive',
+492 silly get     'x-served-by': 'cache-fra1229-FRA',
+492 silly get     'x-cache': 'HIT',
+492 silly get     'x-cache-hits': '1',
+492 silly get     'x-timer': 'S1438968574.752466,VS0,VE0',
+492 silly get     vary: 'Accept' } ]
+493 verbose etag https://registry.npmjs.org/style-loader from cache
+494 verbose get saving style-loader to /home/wylie/.npm/registry.npmjs.org/style-loader/.cache.json
+495 http 304 https://registry.npmjs.org/babel-core
+496 silly get cb [ 304,
+496 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+496 silly get     via: '1.1 varnish',
+496 silly get     'cache-control': 'max-age=60',
+496 silly get     etag: '"B3O90RWDEKKGVL1Q15AJGR6EU"',
+496 silly get     age: '34',
+496 silly get     connection: 'keep-alive',
+496 silly get     'x-served-by': 'cache-fra1241-FRA',
+496 silly get     'x-cache': 'HIT',
+496 silly get     'x-cache-hits': '1',
+496 silly get     'x-timer': 'S1438968574.757030,VS0,VE1',
+496 silly get     vary: 'Accept' } ]
+497 verbose etag https://registry.npmjs.org/babel-core from cache
+498 verbose get saving babel-core to /home/wylie/.npm/registry.npmjs.org/babel-core/.cache.json
+499 http 304 https://registry.npmjs.org/css-loader
+500 silly get cb [ 304,
+500 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+500 silly get     via: '1.1 varnish',
+500 silly get     'cache-control': 'max-age=60',
+500 silly get     etag: '"HVLB9E0XOR4KS1TFOWSBTQJP"',
+500 silly get     age: '52',
+500 silly get     connection: 'keep-alive',
+500 silly get     'x-served-by': 'cache-fra1247-FRA',
+500 silly get     'x-cache': 'HIT',
+500 silly get     'x-cache-hits': '1',
+500 silly get     'x-timer': 'S1438968574.759855,VS0,VE0',
+500 silly get     vary: 'Accept' } ]
+501 verbose etag https://registry.npmjs.org/css-loader from cache
+502 verbose get saving css-loader to /home/wylie/.npm/registry.npmjs.org/css-loader/.cache.json
+503 http 304 https://registry.npmjs.org/webpack-dev-server
+504 silly get cb [ 304,
+504 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+504 silly get     via: '1.1 varnish',
+504 silly get     'cache-control': 'max-age=60',
+504 silly get     etag: '"6P7JVDZUG0TUYTA4N93EZWD0Y"',
+504 silly get     age: '34',
+504 silly get     connection: 'keep-alive',
+504 silly get     'x-served-by': 'cache-fra1247-FRA',
+504 silly get     'x-cache': 'HIT',
+504 silly get     'x-cache-hits': '1',
+504 silly get     'x-timer': 'S1438968574.773356,VS0,VE0',
+504 silly get     vary: 'Accept' } ]
+505 verbose etag https://registry.npmjs.org/webpack-dev-server from cache
+506 verbose get saving webpack-dev-server to /home/wylie/.npm/registry.npmjs.org/webpack-dev-server/.cache.json
+507 http 304 https://registry.npmjs.org/babel-loader
+508 silly get cb [ 304,
+508 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+508 silly get     via: '1.1 varnish',
+508 silly get     'cache-control': 'max-age=60',
+508 silly get     etag: '"B8WVCZNJNBUJMC7PV42Z7YJFQ"',
+508 silly get     age: '35',
+508 silly get     connection: 'keep-alive',
+508 silly get     'x-served-by': 'cache-fra1230-FRA',
+508 silly get     'x-cache': 'HIT',
+508 silly get     'x-cache-hits': '1',
+508 silly get     'x-timer': 'S1438968574.781663,VS0,VE0',
+508 silly get     vary: 'Accept' } ]
+509 verbose etag https://registry.npmjs.org/babel-loader from cache
+510 verbose get saving babel-loader to /home/wylie/.npm/registry.npmjs.org/babel-loader/.cache.json
+511 http 304 https://registry.npmjs.org/core-js
+512 silly get cb [ 304,
+512 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+512 silly get     via: '1.1 varnish',
+512 silly get     'cache-control': 'max-age=60',
+512 silly get     etag: '"AHW626S2HPGLLTUU4MCB9SO15"',
+512 silly get     age: '43',
+512 silly get     connection: 'keep-alive',
+512 silly get     'x-served-by': 'cache-fra1246-FRA',
+512 silly get     'x-cache': 'HIT',
+512 silly get     'x-cache-hits': '1',
+512 silly get     'x-timer': 'S1438968574.782737,VS0,VE0',
+512 silly get     vary: 'Accept' } ]
+513 verbose etag https://registry.npmjs.org/core-js from cache
+514 verbose get saving core-js to /home/wylie/.npm/registry.npmjs.org/core-js/.cache.json
+515 http 304 https://registry.npmjs.org/webpack
+516 silly get cb [ 304,
+516 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+516 silly get     via: '1.1 varnish',
+516 silly get     'cache-control': 'max-age=60',
+516 silly get     etag: '"AGU8YK4Z6G4WNLZDQEFUVOLPU"',
+516 silly get     age: '51',
+516 silly get     connection: 'keep-alive',
+516 silly get     'x-served-by': 'cache-fra1236-FRA',
+516 silly get     'x-cache': 'HIT',
+516 silly get     'x-cache-hits': '1',
+516 silly get     'x-timer': 'S1438968574.781607,VS0,VE2',
+516 silly get     vary: 'Accept' } ]
+517 verbose etag https://registry.npmjs.org/webpack from cache
+518 verbose get saving webpack to /home/wylie/.npm/registry.npmjs.org/webpack/.cache.json
+519 http 304 https://registry.npmjs.org/lodash
+520 silly get cb [ 304,
+520 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+520 silly get     via: '1.1 varnish',
+520 silly get     'cache-control': 'max-age=60',
+520 silly get     etag: '"CZVZVZ42PMXWOXV44M54N3XU9"',
+520 silly get     age: '34',
+520 silly get     connection: 'keep-alive',
+520 silly get     'x-served-by': 'cache-fra1224-FRA',
+520 silly get     'x-cache': 'HIT',
+520 silly get     'x-cache-hits': '2',
+520 silly get     'x-timer': 'S1438968574.799852,VS0,VE0',
+520 silly get     vary: 'Accept' } ]
+521 verbose etag https://registry.npmjs.org/lodash from cache
+522 verbose get saving lodash to /home/wylie/.npm/registry.npmjs.org/lodash/.cache.json
+523 silly addNameTag next cb for immutable with tag latest
+524 silly addNamed immutable@3.7.4
+525 verbose addNamed "3.7.4" is a plain semver version for immutable
+526 silly addNameTag next cb for bluebird with tag latest
+527 silly addNamed bluebird@2.9.34
+528 verbose addNamed "2.9.34" is a plain semver version for bluebird
+529 silly addNameTag next cb for webpack-dev-middleware with tag latest
+530 silly addNamed webpack-dev-middleware@1.2.0
+531 verbose addNamed "1.2.0" is a plain semver version for webpack-dev-middleware
+532 silly addNameTag next cb for redis with tag latest
+533 silly addNamed redis@0.12.1
+534 verbose addNamed "0.12.1" is a plain semver version for redis
+535 silly addNameTag next cb for react-hot-loader with tag latest
+536 silly addNamed react-hot-loader@1.2.8
+537 verbose addNamed "1.2.8" is a plain semver version for react-hot-loader
+538 silly addNameTag next cb for style-loader with tag latest
+539 silly addNamed style-loader@0.12.3
+540 verbose addNamed "0.12.3" is a plain semver version for style-loader
+541 silly addNameTag next cb for css-loader with tag latest
+542 silly addNamed css-loader@0.15.6
+543 verbose addNamed "0.15.6" is a plain semver version for css-loader
+544 silly addNameTag next cb for babel-core with tag latest
+545 silly addNamed babel-core@5.8.21
+546 verbose addNamed "5.8.21" is a plain semver version for babel-core
+547 silly addNameTag next cb for webpack-dev-server with tag latest
+548 silly addNamed webpack-dev-server@1.10.1
+549 verbose addNamed "1.10.1" is a plain semver version for webpack-dev-server
+550 silly addNameTag next cb for babel-loader with tag latest
+551 silly addNamed babel-loader@5.3.2
+552 verbose addNamed "5.3.2" is a plain semver version for babel-loader
+553 silly addNameTag next cb for core-js with tag latest
+554 silly addNamed core-js@1.0.1
+555 verbose addNamed "1.0.1" is a plain semver version for core-js
+556 silly addNameTag next cb for webpack with tag latest
+557 silly addNamed webpack@1.11.0
+558 verbose addNamed "1.11.0" is a plain semver version for webpack
+559 silly addNameTag next cb for lodash with tag latest
+560 silly addNamed lodash@3.10.1
+561 verbose addNamed "3.10.1" is a plain semver version for lodash
+562 silly cache afterAdd immutable@3.7.4
+563 verbose afterAdd /home/wylie/.npm/immutable/3.7.4/package/package.json not in flight; writing
+564 silly cache afterAdd webpack-dev-middleware@1.2.0
+565 verbose afterAdd /home/wylie/.npm/webpack-dev-middleware/1.2.0/package/package.json not in flight; writing
+566 silly cache afterAdd bluebird@2.9.34
+567 verbose afterAdd /home/wylie/.npm/bluebird/2.9.34/package/package.json not in flight; writing
+568 silly cache afterAdd redis@0.12.1
+569 verbose afterAdd /home/wylie/.npm/redis/0.12.1/package/package.json not in flight; writing
+570 silly cache afterAdd react-hot-loader@1.2.8
+571 verbose afterAdd /home/wylie/.npm/react-hot-loader/1.2.8/package/package.json not in flight; writing
+572 silly cache afterAdd style-loader@0.12.3
+573 verbose afterAdd /home/wylie/.npm/style-loader/0.12.3/package/package.json not in flight; writing
+574 silly cache afterAdd css-loader@0.15.6
+575 verbose afterAdd /home/wylie/.npm/css-loader/0.15.6/package/package.json not in flight; writing
+576 silly cache afterAdd babel-core@5.8.21
+577 verbose afterAdd /home/wylie/.npm/babel-core/5.8.21/package/package.json not in flight; writing
+578 silly cache afterAdd webpack-dev-server@1.10.1
+579 verbose afterAdd /home/wylie/.npm/webpack-dev-server/1.10.1/package/package.json not in flight; writing
+580 silly cache afterAdd babel-loader@5.3.2
+581 verbose afterAdd /home/wylie/.npm/babel-loader/5.3.2/package/package.json not in flight; writing
+582 silly cache afterAdd core-js@1.0.1
+583 verbose afterAdd /home/wylie/.npm/core-js/1.0.1/package/package.json not in flight; writing
+584 http 304 https://registry.npmjs.org/flux
+585 silly get cb [ 304,
+585 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+585 silly get     via: '1.1 varnish',
+585 silly get     'cache-control': 'max-age=60',
+585 silly get     etag: '"6LWLCM49D1VF4SACEG6H9X9RQ"',
+585 silly get     age: '35',
+585 silly get     connection: 'keep-alive',
+585 silly get     'x-served-by': 'cache-fra1223-FRA',
+585 silly get     'x-cache': 'HIT',
+585 silly get     'x-cache-hits': '1',
+585 silly get     'x-timer': 'S1438968574.906335,VS0,VE0',
+585 silly get     vary: 'Accept' } ]
+586 verbose etag https://registry.npmjs.org/flux from cache
+587 verbose get saving flux to /home/wylie/.npm/registry.npmjs.org/flux/.cache.json
+588 http 304 https://registry.npmjs.org/source-map-loader
+589 silly get cb [ 304,
+589 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+589 silly get     via: '1.1 varnish',
+589 silly get     'cache-control': 'max-age=60',
+589 silly get     etag: '"6UV64URET0H8RW8TEWT2LPMH"',
+589 silly get     age: '0',
+589 silly get     connection: 'keep-alive',
+589 silly get     'x-served-by': 'cache-fra1226-FRA',
+589 silly get     'x-cache': 'MISS',
+589 silly get     'x-cache-hits': '0',
+589 silly get     'x-timer': 'S1438968574.722608,VS0,VE184',
+589 silly get     vary: 'Accept' } ]
+590 verbose etag https://registry.npmjs.org/source-map-loader from cache
+591 verbose get saving source-map-loader to /home/wylie/.npm/registry.npmjs.org/source-map-loader/.cache.json
+592 verbose afterAdd /home/wylie/.npm/bluebird/2.9.34/package/package.json written
+593 info already installed bluebird@2.9.34
+594 verbose afterAdd /home/wylie/.npm/immutable/3.7.4/package/package.json written
+595 info already installed immutable@3.7.4
+596 verbose afterAdd /home/wylie/.npm/webpack-dev-middleware/1.2.0/package/package.json written
+597 info already installed webpack-dev-middleware@1.2.0
+598 verbose afterAdd /home/wylie/.npm/redis/0.12.1/package/package.json written
+599 info already installed redis@0.12.1
+600 silly cache afterAdd webpack@1.11.0
+601 verbose afterAdd /home/wylie/.npm/webpack/1.11.0/package/package.json not in flight; writing
+602 silly cache afterAdd lodash@3.10.1
+603 verbose afterAdd /home/wylie/.npm/lodash/3.10.1/package/package.json not in flight; writing
+604 http 304 https://registry.npmjs.org/extract-text-webpack-plugin
+605 silly get cb [ 304,
+605 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+605 silly get     via: '1.1 varnish',
+605 silly get     'cache-control': 'max-age=60',
+605 silly get     etag: '"7CYCMU1KZNXCRNFHUZCTLON85"',
+605 silly get     age: '0',
+605 silly get     connection: 'keep-alive',
+605 silly get     'x-served-by': 'cache-fra1223-FRA',
+605 silly get     'x-cache': 'HIT',
+605 silly get     'x-cache-hits': '1',
+605 silly get     'x-timer': 'S1438968574.741084,VS0,VE175',
+605 silly get     vary: 'Accept' } ]
+606 verbose etag https://registry.npmjs.org/extract-text-webpack-plugin from cache
+607 verbose get saving extract-text-webpack-plugin to /home/wylie/.npm/registry.npmjs.org/extract-text-webpack-plugin/.cache.json
+608 verbose afterAdd /home/wylie/.npm/react-hot-loader/1.2.8/package/package.json written
+609 info already installed react-hot-loader@1.2.8
+610 verbose afterAdd /home/wylie/.npm/style-loader/0.12.3/package/package.json written
+611 info already installed style-loader@0.12.3
+612 verbose afterAdd /home/wylie/.npm/css-loader/0.15.6/package/package.json written
+613 info already installed css-loader@0.15.6
+614 http 304 https://registry.npmjs.org/mathjs
+615 silly get cb [ 304,
+615 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+615 silly get     via: '1.1 varnish',
+615 silly get     'cache-control': 'max-age=60',
+615 silly get     etag: '"5ZA8A57YT6TJE6U54JPPPH8WH"',
+615 silly get     age: '0',
+615 silly get     connection: 'keep-alive',
+615 silly get     'x-served-by': 'cache-fra1220-FRA',
+615 silly get     'x-cache': 'HIT',
+615 silly get     'x-cache-hits': '1',
+615 silly get     'x-timer': 'S1438968574.746356,VS0,VE189',
+615 silly get     vary: 'Accept' } ]
+616 verbose etag https://registry.npmjs.org/mathjs from cache
+617 verbose get saving mathjs to /home/wylie/.npm/registry.npmjs.org/mathjs/.cache.json
+618 verbose afterAdd /home/wylie/.npm/babel-core/5.8.21/package/package.json written
+619 info already installed babel-core@5.8.21
+620 verbose afterAdd /home/wylie/.npm/webpack-dev-server/1.10.1/package/package.json written
+621 info already installed webpack-dev-server@1.10.1
+622 verbose afterAdd /home/wylie/.npm/babel-loader/5.3.2/package/package.json written
+623 info already installed babel-loader@5.3.2
+624 verbose afterAdd /home/wylie/.npm/core-js/1.0.1/package/package.json written
+625 info already installed core-js@1.0.1
+626 verbose afterAdd /home/wylie/.npm/webpack/1.11.0/package/package.json written
+627 info already installed webpack@1.11.0
+628 verbose afterAdd /home/wylie/.npm/lodash/3.10.1/package/package.json written
+629 info already installed lodash@3.10.1
+630 silly addNameTag next cb for flux with tag latest
+631 silly addNamed flux@2.0.3
+632 verbose addNamed "2.0.3" is a plain semver version for flux
+633 silly addNameTag next cb for source-map-loader with tag latest
+634 silly addNamed source-map-loader@0.1.5
+635 verbose addNamed "0.1.5" is a plain semver version for source-map-loader
+636 silly addNameTag next cb for extract-text-webpack-plugin with tag latest
+637 silly addNamed extract-text-webpack-plugin@0.8.2
+638 verbose addNamed "0.8.2" is a plain semver version for extract-text-webpack-plugin
+639 silly addNameTag next cb for mathjs with tag latest
+640 silly addNamed mathjs@2.0.1
+641 verbose addNamed "2.0.1" is a plain semver version for mathjs
+642 silly cache afterAdd flux@2.0.3
+643 verbose afterAdd /home/wylie/.npm/flux/2.0.3/package/package.json not in flight; writing
+644 silly cache afterAdd source-map-loader@0.1.5
+645 verbose afterAdd /home/wylie/.npm/source-map-loader/0.1.5/package/package.json not in flight; writing
+646 silly cache afterAdd extract-text-webpack-plugin@0.8.2
+647 verbose afterAdd /home/wylie/.npm/extract-text-webpack-plugin/0.8.2/package/package.json not in flight; writing
+648 silly cache afterAdd mathjs@2.0.1
+649 verbose afterAdd /home/wylie/.npm/mathjs/2.0.1/package/package.json not in flight; writing
+650 verbose afterAdd /home/wylie/.npm/flux/2.0.3/package/package.json written
+651 info already installed flux@2.0.3
+652 verbose afterAdd /home/wylie/.npm/source-map-loader/0.1.5/package/package.json written
+653 info already installed source-map-loader@0.1.5
+654 verbose afterAdd /home/wylie/.npm/extract-text-webpack-plugin/0.8.2/package/package.json written
+655 info already installed extract-text-webpack-plugin@0.8.2
+656 verbose afterAdd /home/wylie/.npm/mathjs/2.0.1/package/package.json written
+657 info already installed mathjs@2.0.1
+658 http 304 https://registry.npmjs.org/gl-matrix
+659 silly get cb [ 304,
+659 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+659 silly get     via: '1.1 varnish',
+659 silly get     'cache-control': 'max-age=60',
+659 silly get     etag: '"CZ9JQR4MT4OZ77Y7KI8T3NJ95"',
+659 silly get     age: '0',
+659 silly get     connection: 'keep-alive',
+659 silly get     'x-served-by': 'cache-fra1238-FRA',
+659 silly get     'x-cache': 'MISS',
+659 silly get     'x-cache-hits': '0',
+659 silly get     'x-timer': 'S1438968574.833519,VS0,VE182',
+659 silly get     vary: 'Accept' } ]
+660 verbose etag https://registry.npmjs.org/gl-matrix from cache
+661 verbose get saving gl-matrix to /home/wylie/.npm/registry.npmjs.org/gl-matrix/.cache.json
+662 silly addNameTag next cb for gl-matrix with tag latest
+663 silly addNamed gl-matrix@2.3.1
+664 verbose addNamed "2.3.1" is a plain semver version for gl-matrix
+665 silly cache afterAdd gl-matrix@2.3.1
+666 verbose afterAdd /home/wylie/.npm/gl-matrix/2.3.1/package/package.json not in flight; writing
+667 verbose afterAdd /home/wylie/.npm/gl-matrix/2.3.1/package/package.json written
+668 info already installed gl-matrix@2.3.1
+669 http 304 https://registry.npmjs.org/stylus-loader
+670 silly get cb [ 304,
+670 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+670 silly get     via: '1.1 varnish',
+670 silly get     'cache-control': 'max-age=60',
+670 silly get     etag: '"BXMSJIO9Y0ROQXZH0FFSLTLC7"',
+670 silly get     age: '0',
+670 silly get     connection: 'keep-alive',
+670 silly get     'x-served-by': 'cache-fra1225-FRA',
+670 silly get     'x-cache': 'MISS',
+670 silly get     'x-cache-hits': '0',
+670 silly get     'x-timer': 'S1438968574.767263,VS0,VE349',
+670 silly get     vary: 'Accept' } ]
+671 verbose etag https://registry.npmjs.org/stylus-loader from cache
+672 verbose get saving stylus-loader to /home/wylie/.npm/registry.npmjs.org/stylus-loader/.cache.json
+673 http 304 https://registry.npmjs.org/shortid
+674 silly get cb [ 304,
+674 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+674 silly get     via: '1.1 varnish',
+674 silly get     'cache-control': 'max-age=60',
+674 silly get     etag: '"6RUISHV35WR9PV0209AAUXY7L"',
+674 silly get     age: '0',
+674 silly get     connection: 'keep-alive',
+674 silly get     'x-served-by': 'cache-fra1233-FRA',
+674 silly get     'x-cache': 'HIT',
+674 silly get     'x-cache-hits': '1',
+674 silly get     'x-timer': 'S1438968574.710493,VS0,VE402',
+674 silly get     vary: 'Accept' } ]
+675 verbose etag https://registry.npmjs.org/shortid from cache
+676 verbose get saving shortid to /home/wylie/.npm/registry.npmjs.org/shortid/.cache.json
+677 silly addNameTag next cb for stylus-loader with tag latest
+678 silly addNamed stylus-loader@1.2.1
+679 verbose addNamed "1.2.1" is a plain semver version for stylus-loader
+680 silly addNameTag next cb for shortid with tag latest
+681 silly addNamed shortid@2.2.2
+682 verbose addNamed "2.2.2" is a plain semver version for shortid
+683 silly cache afterAdd stylus-loader@1.2.1
+684 verbose afterAdd /home/wylie/.npm/stylus-loader/1.2.1/package/package.json not in flight; writing
+685 silly cache afterAdd shortid@2.2.2
+686 verbose afterAdd /home/wylie/.npm/shortid/2.2.2/package/package.json not in flight; writing
+687 verbose afterAdd /home/wylie/.npm/stylus-loader/1.2.1/package/package.json written
+688 info already installed stylus-loader@1.2.1
+689 verbose afterAdd /home/wylie/.npm/shortid/2.2.2/package/package.json written
+690 info already installed shortid@2.2.2
+691 http 304 https://registry.npmjs.org/react-three
+692 silly get cb [ 304,
+692 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+692 silly get     via: '1.1 varnish',
+692 silly get     'cache-control': 'max-age=60',
+692 silly get     etag: '"1G6788CCQHJI1GB9YUE4WS889"',
+692 silly get     age: '0',
+692 silly get     connection: 'keep-alive',
+692 silly get     'x-served-by': 'cache-fra1239-FRA',
+692 silly get     'x-cache': 'MISS',
+692 silly get     'x-cache-hits': '0',
+692 silly get     'x-timer': 'S1438968574.839297,VS0,VE404',
+692 silly get     vary: 'Accept' } ]
+693 verbose etag https://registry.npmjs.org/react-three from cache
+694 verbose get saving react-three to /home/wylie/.npm/registry.npmjs.org/react-three/.cache.json
+695 silly addNameTag next cb for react-three with tag latest
+696 silly addNamed react-three@0.6.1
+697 verbose addNamed "0.6.1" is a plain semver version for react-three
+698 silly cache afterAdd react-three@0.6.1
+699 verbose afterAdd /home/wylie/.npm/react-three/0.6.1/package/package.json not in flight; writing
+700 verbose afterAdd /home/wylie/.npm/react-three/0.6.1/package/package.json written
+701 info already installed react-three@0.6.1
+702 http 304 https://registry.npmjs.org/file-loader
+703 silly get cb [ 304,
+703 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+703 silly get     via: '1.1 varnish',
+703 silly get     'cache-control': 'max-age=60',
+703 silly get     etag: '"110ILWAIO72PBGBJVW5QH86D2"',
+703 silly get     age: '0',
+703 silly get     connection: 'keep-alive',
+703 silly get     'x-served-by': 'cache-fra1225-FRA',
+703 silly get     'x-cache': 'HIT',
+703 silly get     'x-cache-hits': '1',
+703 silly get     'x-timer': 'S1438968574.763708,VS0,VE668',
+703 silly get     vary: 'Accept' } ]
+704 verbose etag https://registry.npmjs.org/file-loader from cache
+705 verbose get saving file-loader to /home/wylie/.npm/registry.npmjs.org/file-loader/.cache.json
+706 silly addNameTag next cb for file-loader with tag latest
+707 silly addNamed file-loader@0.8.4
+708 verbose addNamed "0.8.4" is a plain semver version for file-loader
+709 silly cache afterAdd file-loader@0.8.4
+710 verbose afterAdd /home/wylie/.npm/file-loader/0.8.4/package/package.json not in flight; writing
+711 verbose afterAdd /home/wylie/.npm/file-loader/0.8.4/package/package.json written
+712 info already installed file-loader@0.8.4
+713 http 304 https://registry.npmjs.org/worker-loader
+714 silly get cb [ 304,
+714 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+714 silly get     via: '1.1 varnish',
+714 silly get     'cache-control': 'max-age=60',
+714 silly get     etag: '"EXZZPUEF8R3SEPDCD3QM6XDPB"',
+714 silly get     age: '0',
+714 silly get     connection: 'keep-alive',
+714 silly get     'x-served-by': 'cache-fra1246-FRA',
+714 silly get     'x-cache': 'MISS',
+714 silly get     'x-cache-hits': '0',
+714 silly get     'x-timer': 'S1438968574.734495,VS0,VE725',
+714 silly get     vary: 'Accept' } ]
+715 verbose etag https://registry.npmjs.org/worker-loader from cache
+716 verbose get saving worker-loader to /home/wylie/.npm/registry.npmjs.org/worker-loader/.cache.json
+717 silly addNameTag next cb for worker-loader with tag latest
+718 silly addNamed worker-loader@0.6.0
+719 verbose addNamed "0.6.0" is a plain semver version for worker-loader
+720 silly cache afterAdd worker-loader@0.6.0
+721 verbose afterAdd /home/wylie/.npm/worker-loader/0.6.0/package/package.json not in flight; writing
+722 verbose afterAdd /home/wylie/.npm/worker-loader/0.6.0/package/package.json written
+723 info already installed worker-loader@0.6.0
+724 http 304 https://registry.npmjs.org/coffee-loader
+725 silly get cb [ 304,
+725 silly get   { date: 'Fri, 07 Aug 2015 17:29:34 GMT',
+725 silly get     via: '1.1 varnish',
+725 silly get     'cache-control': 'max-age=60',
+725 silly get     etag: '"DVRD8N5UJQB6M6AND3FYWQ3LS"',
+725 silly get     age: '0',
+725 silly get     connection: 'keep-alive',
+725 silly get     'x-served-by': 'cache-fra1235-FRA',
+725 silly get     'x-cache': 'MISS',
+725 silly get     'x-cache-hits': '0',
+725 silly get     'x-timer': 'S1438968574.779747,VS0,VE692',
+725 silly get     vary: 'Accept' } ]
+726 verbose etag https://registry.npmjs.org/coffee-loader from cache
+727 verbose get saving coffee-loader to /home/wylie/.npm/registry.npmjs.org/coffee-loader/.cache.json
+728 silly addNameTag next cb for coffee-loader with tag latest
+729 silly addNamed coffee-loader@0.7.2
+730 verbose addNamed "0.7.2" is a plain semver version for coffee-loader
+731 silly cache afterAdd coffee-loader@0.7.2
+732 verbose afterAdd /home/wylie/.npm/coffee-loader/0.7.2/package/package.json not in flight; writing
+733 verbose afterAdd /home/wylie/.npm/coffee-loader/0.7.2/package/package.json written
+734 info already installed coffee-loader@0.7.2
+735 silly install resolved []
+736 info build /home/wylie/Market_Garden
+737 info linkStuff @
+738 silly linkStuff @ has /home/wylie as its parent node_modules
+739 verbose linkBins @
+740 verbose linkMans @
+741 verbose rebuildBundles @
+742 verbose rebuildBundles [ '.bin',
+742 verbose rebuildBundles   'babel-core',
+742 verbose rebuildBundles   'babel-loader',
+742 verbose rebuildBundles   'bluebird',
+742 verbose rebuildBundles   'coffee-loader',
+742 verbose rebuildBundles   'coffee-script',
+742 verbose rebuildBundles   'core-js',
+742 verbose rebuildBundles   'css-loader',
+742 verbose rebuildBundles   'extract-text-webpack-plugin',
+742 verbose rebuildBundles   'file-loader',
+742 verbose rebuildBundles   'flux',
+742 verbose rebuildBundles   'gl-matrix',
+742 verbose rebuildBundles   'immutable',
+742 verbose rebuildBundles   'lodash',
+742 verbose rebuildBundles   'mathjs',
+742 verbose rebuildBundles   'node-libs-browser',
+742 verbose rebuildBundles   'react',
+742 verbose rebuildBundles   'react-dom',
+742 verbose rebuildBundles   'react-hot-loader',
+742 verbose rebuildBundles   'react-three',
+742 verbose rebuildBundles   'redis',
+742 verbose rebuildBundles   'shortid',
+742 verbose rebuildBundles   'source-map-loader',
+742 verbose rebuildBundles   'style-loader',
+742 verbose rebuildBundles   'stylus-loader',
+742 verbose rebuildBundles   'three',
+742 verbose rebuildBundles   'webpack',
+742 verbose rebuildBundles   'webpack-dev-middleware',
+742 verbose rebuildBundles   'webpack-dev-server',
+742 verbose rebuildBundles   'worker-loader' ]
+743 verbose rebuild bundle /home/wylie/Market_Garden/node_modules/coffee-script
+744 info build /home/wylie/Market_Garden/node_modules/coffee-script
+745 info preinstall coffee-script@1.9.3
+746 info linkStuff coffee-script@1.9.3
+747 silly linkStuff coffee-script@1.9.3 has /home/wylie/Market_Garden/node_modules as its parent node_modules
+748 warn prefer global coffee-script@1.9.3 should be installed with -g
+749 verbose linkBins coffee-script@1.9.3
+750 verbose link bins [ { coffee: './bin/coffee', cake: './bin/cake' },
+750 verbose link bins   '/home/wylie/Market_Garden/node_modules/.bin',
+750 verbose link bins   false ]
+751 verbose linkMans coffee-script@1.9.3
+752 verbose rebuildBundles coffee-script@1.9.3
+753 silly gentlyRm /home/wylie/Market_Garden/node_modules/.bin/coffee is being purged
+754 verbose gentlyRm don't care about contents; nuking /home/wylie/Market_Garden/node_modules/.bin/coffee
+755 silly gentlyRm /home/wylie/Market_Garden/node_modules/.bin/cake is being purged
+756 verbose gentlyRm don't care about contents; nuking /home/wylie/Market_Garden/node_modules/.bin/cake
+757 silly vacuum-fs purging /home/wylie/Market_Garden/node_modules/.bin/coffee
+758 silly vacuum-fs purging /home/wylie/Market_Garden/node_modules/.bin/cake
+759 silly vacuum-fs quitting because other entries in /home/wylie/Market_Garden/node_modules/.bin
+760 silly vacuum-fs quitting because other entries in /home/wylie/Market_Garden/node_modules/.bin
+761 info install coffee-script@1.9.3
+762 info postinstall coffee-script@1.9.3
+763 verbose rebuild bundle /home/wylie/Market_Garden/node_modules/node-libs-browser
+764 info build /home/wylie/Market_Garden/node_modules/node-libs-browser
+765 info preinstall node-libs-browser@0.5.2
+766 info linkStuff node-libs-browser@0.5.2
+767 silly linkStuff node-libs-browser@0.5.2 has /home/wylie/Market_Garden/node_modules as its parent node_modules
+768 verbose linkBins node-libs-browser@0.5.2
+769 verbose linkMans node-libs-browser@0.5.2
+770 verbose rebuildBundles node-libs-browser@0.5.2
+771 verbose rebuildBundles [ 'assert',
+771 verbose rebuildBundles   'browserify-zlib',
+771 verbose rebuildBundles   'buffer',
+771 verbose rebuildBundles   'console-browserify',
+771 verbose rebuildBundles   'constants-browserify',
+771 verbose rebuildBundles   'crypto-browserify',
+771 verbose rebuildBundles   'domain-browser',
+771 verbose rebuildBundles   'events',
+771 verbose rebuildBundles   'http-browserify',
+771 verbose rebuildBundles   'https-browserify',
+771 verbose rebuildBundles   'os-browserify',
+771 verbose rebuildBundles   'path-browserify',
+771 verbose rebuildBundles   'process',
+771 verbose rebuildBundles   'punycode',
+771 verbose rebuildBundles   'querystring-es3',
+771 verbose rebuildBundles   'readable-stream',
+771 verbose rebuildBundles   'stream-browserify',
+771 verbose rebuildBundles   'string_decoder',
+771 verbose rebuildBundles   'timers-browserify',
+771 verbose rebuildBundles   'tty-browserify',
+771 verbose rebuildBundles   'url',
+771 verbose rebuildBundles   'util',
+771 verbose rebuildBundles   'vm-browserify' ]
+772 info install node-libs-browser@0.5.2
+773 info postinstall node-libs-browser@0.5.2
+774 verbose rebuild bundle /home/wylie/Market_Garden/node_modules/three
+775 info build /home/wylie/Market_Garden/node_modules/three
+776 info preinstall three@0.70.1
+777 info linkStuff three@0.70.1
+778 silly linkStuff three@0.70.1 has /home/wylie/Market_Garden/node_modules as its parent node_modules
+779 verbose linkBins three@0.70.1
+780 verbose linkMans three@0.70.1
+781 verbose rebuildBundles three@0.70.1
+782 info install three@0.70.1
+783 info postinstall three@0.70.1
+784 info install @
+785 info postinstall @
+786 info prepublish @
+787 verbose validateInstall loading /home/wylie/Market_Garden/package.json for validation
+788 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/react-hot-api/node_modules/react/node_modules/envify/node_modules/jstransform requires source-map@'0.1.31' but will load
+788 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/source-map,
+788 warn unmet dependency which is version 0.1.40
+789 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/react-hot-api/node_modules/webpack/node_modules/uglify-js requires async@'~0.2.6' but will load
+789 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/react-hot-api/node_modules/webpack/node_modules/async,
+789 warn unmet dependency which is version 0.9.2
+790 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/react-hot-api/node_modules/webpack/node_modules/uglify-js requires source-map@'0.1.34' but will load
+790 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/source-map,
+790 warn unmet dependency which is version 0.1.40
+791 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/react-hot-api/node_modules/webpack/node_modules/node-libs-browser/node_modules/timers-browserify requires process@'~0.11.0' but will load
+791 warn unmet dependency /home/wylie/Market_Garden/node_modules/react-hot-loader/node_modules/react-hot-api/node_modules/webpack/node_modules/node-libs-browser/node_modules/process,
+791 warn unmet dependency which is version 0.10.1
+792 verbose stack Error: The package react@0.14.0-beta1 does not satisfy its siblings' peerDependencies requirements!
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/lib/install.js:125:32
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/lib/install.js:268:7
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+792 verbose stack     at cb (/home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+792 verbose stack     at cb (/home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+792 verbose stack     at cb (/home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+792 verbose stack     at /home/wylie/.nvm/versions/io.js/v3.0.0/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+793 verbose cwd /home/wylie/Market_Garden
+794 error Linux 3.13.0-55-generic
+795 error argv "/home/wylie/.nvm/versions/io.js/v3.0.0/bin/iojs" "/home/wylie/.nvm/versions/io.js/v3.0.0/bin/npm" "install"
+796 error node v3.0.0
+797 error npm  v2.13.3
+798 error code EPEERINVALID
+799 error peerinvalid The package react@0.14.0-beta1 does not satisfy its siblings' peerDependencies requirements!
+800 verbose exit [ 1, true ]
