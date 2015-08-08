@@ -2,7 +2,7 @@
 
 ##### Research & development with:
 ###### ~~1. React + Flux + all-SVGs-all-the-time style~~
-######0: Flux for domain-logic + React for Render.
+######0: Flux for domain-logic + ~~React for Render~~ -- actually React is irrelevant if we're intending to webgl the whole thing.  
 ######1: Eschew HTML+CSS (except for proper hypertext doc applications) in favor of rendering everything with WebGL. (currently Three.js).
 ######1.5: Fallback to SVG-all-the-things.  We've had good results with this, only going to (1) because suspect could get even _better_ results with WebGL.
 ######1.8: SVG-all-the-things relies on good Immutable implementation and rendering stuff.  Eliminate uneccesary rendering.
