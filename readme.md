@@ -14,7 +14,7 @@
 
 -aug6-  I had enlightenment newly, it seems 
 
-(alpha) rendering might be best through THREE.js even for Two_Dimensional apps, given the way it goes to hardware.  And actually, will probably start slipping subtle 3D stuff in.
+(alpha) rendering performance might be best through WebGL even for strictly 2D apps, given the way it goes to hardware.  And actually, will probably start slipping subtle 3D stuff in.
 
 (beta) I think the audio will need to be synthesised realtime, partly from channels associated with like user's microphone.  this means web-rtc.
 
