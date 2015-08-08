@@ -3,7 +3,7 @@
 ##### Research & development with:
 ###### ~~1. React + Flux + all-SVGs-all-the-time style~~
 ######0: Flux for domain-logic + ~~React for Render~~ -- actually React is irrelevant if we're intending to webgl the whole thing.  
-######1: Eschew HTML+CSS (except for proper hypertext doc applications) in favor of rendering everything with WebGL. (currently Three.js).
+######1: Eschew HTML+CSS (except for proper hypertext doc applications) in favor of rendering everything with WebGL. (I've looked into libraries, and have decided to go with raw / no-frameworks for time being).  [pixi.js](https://github.com/pixijs/pixi.js) looks interesting for 2D apps, but for now will just start from scratch.  Three.js also looks interesting, and was good intro, but again, want to go closer to metal for starting serious stuff)
 ######1.5: Fallback to SVG-all-the-things.  We've had good results with this, only going to (1) because suspect could get even _better_ results with WebGL.
 ######1.8: SVG-all-the-things relies on good Immutable implementation and rendering stuff.  Eliminate uneccesary rendering.
 ######2. Concurrency with WebWorkers. Research how to factor out computationally intensive elements of program flow to workers.  WebGL will apparently help massively with this, in respect to the graphics rendering.  I think all that's left to optimise in this regard -- well that would depend on the game/app, any non-graphical logic.  I really have no idea how this will work out, just want to experiment and learn. Seeing that new Galaxies coming out of Samsung with 8 cores I'm thinking it would mean something substantial to have all of them spinning.  
