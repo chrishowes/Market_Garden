@@ -21,6 +21,10 @@ module.exports = config =
     module:
         loaders: [
             {
+                test: /\.glsl$/
+                loader: 'webpack-glsl'
+            },
+            {
                 test: /\.styl$/
                 loader: 'style-loader!css-loader!stylus-loader'
             },

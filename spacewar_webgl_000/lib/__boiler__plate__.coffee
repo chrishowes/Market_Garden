@@ -9,7 +9,6 @@ _ = require('lodash')
 Bluebird = require('bluebird')
 math = require('./math.min.js')
 flux = require('flux')
-require './gladder.coffee'
 
 
 Dispatcher = flux.Dispatcher
@@ -18,7 +17,6 @@ EventEmitter = require('events').EventEmitter
 
 
 module.exports = ->
-    Gladder: Gladder
     EventEmitter: EventEmitter
     dispatcher: dispatcher
     flux: flux

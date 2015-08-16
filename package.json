@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "webpack-glsl-loader": "latest",
     "gl-matrix": "latest",
     "react-three": "latest",
     "flux": "latest",
